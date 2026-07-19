@@ -1239,6 +1239,15 @@ document.querySelectorAll('.animate-on-scroll[data-delay]').forEach(el => {
     appendMessage(text, false);
     chatInput.value = '';
 
+    const apiKey = ''; // Configure API key here or via backend environment
+
+    if (!apiKey) {
+      setTimeout(() => {
+        appendMessage("I'm sorry, AI chat is currently offline. Please feel free to use the contact form to reach our advisors.", true);
+      }, 500);
+      return;
+    }
+
     // Show typing indicator
     const typingDiv = document.createElement('div');
     typingDiv.className = 'ai-msg ai-msg-bot typing-indicator';
@@ -1246,7 +1255,6 @@ document.querySelectorAll('.animate-on-scroll[data-delay]').forEach(el => {
     messages.appendChild(typingDiv);
     messages.scrollTop = messages.scrollHeight;
 
-    const apiKey = atob('QVEuQWI4Uk42SURlN2c3YnExN2FnUEZIakkxdXNGUFlMRjlzcURScFgzOHY0elI4X0JXU1E=');
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     fetch(url, {
