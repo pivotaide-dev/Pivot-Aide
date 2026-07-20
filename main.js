@@ -2664,3 +2664,119 @@ document.addEventListener('DOMContentLoaded', () => {
         }, (i * 0.14) + 0.5);
     });
 })();
+
+/* ═══════════════════════════════════════════════════════════════
+   PRIVACY POLICY SMALL BOX MODAL CONTROLLER
+   Injects and manages the small Privacy Policy popup modal box
+   so clicking Privacy Policy links does not navigate away or reload.
+═══════════════════════════════════════════════════════════════ */
+(function PrivacyPolicyModalEngine() {
+    function initModal() {
+        if (document.getElementById('privacyPolicyModal')) return;
+
+        const modalHTML = `
+        <div class="privacy-modal-overlay" id="privacyPolicyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+            <div class="privacy-modal-card">
+                <div class="privacy-modal-header">
+                    <div class="privacy-modal-title-group">
+                        <div class="privacy-modal-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="privacy-modal-title" id="privacyModalTitle">Privacy Policy</h3>
+                    </div>
+                    <button type="button" class="privacy-modal-close" id="privacyModalCloseBtn" aria-label="Close Privacy Policy">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="privacy-modal-body">
+                    <div>
+                        <div class="privacy-section-title">1. Confidentiality Commitment</div>
+                        <p>At Pivot Aide, we strictly respect your privacy. All business, financial, tax, and operational information provided to us remains strictly confidential. We do not sell, rent, or trade your personal or corporate data to third parties.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">2. Information We Collect</div>
+                        <p>We collect information you directly provide when contacting us or filling out service request forms, including your name, email address, phone number, company name, and specific financial or ERP consulting inquiries.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">3. How Your Information Is Used</div>
+                        <p>Your data is exclusively utilized to respond to your inquiries, deliver requested financial advisory or Odoo ERP services, process funding readiness assessments, and maintain seamless client support.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">4. Data Security & Storage</div>
+                        <p>We employ administrative, technical, and physical security measures to guard your information against unauthorized access, loss, or disclosure. System access is strictly restricted to authorized staff members.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">5. Your Rights & Inquiries</div>
+                        <p>You may request access to, correction of, or deletion of your personal contact data at any time. For questions regarding our privacy practices, please contact us directly at <a href="mailto:info@pivotaide.com" style="color: var(--yellow); text-decoration: underline;">info@pivotaide.com</a>.</p>
+                    </div>
+                </div>
+                <div class="privacy-modal-footer">
+                    <button type="button" class="privacy-modal-btn" id="privacyModalGotItBtn">Got It</button>
+                </div>
+            </div>
+        </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        const overlay = document.getElementById('privacyPolicyModal');
+        const closeBtn = document.getElementById('privacyModalCloseBtn');
+        const gotItBtn = document.getElementById('privacyModalGotItBtn');
+
+        function closeModal() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        gotItBtn.addEventListener('click', closeModal);
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
+    function openModal() {
+        initModal();
+        const overlay = document.getElementById('privacyPolicyModal');
+        if (overlay) {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initModal();
+
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+            const text = (link.textContent || '').trim().toLowerCase();
+
+            if (text === 'privacy policy' || href === '#privacy' || link.classList.contains('privacy-link')) {
+                e.preventDefault();
+                openModal();
+            }
+        });
+    });
+})();
+
