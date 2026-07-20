@@ -2780,3 +2780,128 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })();
 
+/* ═══════════════════════════════════════════════════════════════
+   TERMS OF SERVICE SMALL BOX MODAL CONTROLLER
+   Injects and manages the small Terms of Service popup modal box
+   so clicking Terms of Service links does not navigate away or reload.
+═══════════════════════════════════════════════════════════════ */
+(function TermsOfServiceModalEngine() {
+    function initTermsModal() {
+        if (document.getElementById('termsOfServiceModal')) return;
+
+        const modalHTML = `
+        <div class="privacy-modal-overlay" id="termsOfServiceModal" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+            <div class="privacy-modal-card">
+                <div class="privacy-modal-header">
+                    <div class="privacy-modal-title-group">
+                        <div class="privacy-modal-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="privacy-modal-title" id="termsModalTitle">Terms of Service</h3>
+                    </div>
+                    <button type="button" class="privacy-modal-close" id="termsModalCloseBtn" aria-label="Close Terms of Service">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="privacy-modal-body">
+                    <div>
+                        <div class="privacy-section-title">1. Acceptance of Terms</div>
+                        <p>By accessing or utilizing Pivot Aide’s website, business advisory, financial consulting, or Odoo ERP services, you agree to be bound by these Terms of Service. If you do not agree, please refrain from using our services.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">2. Professional Services</div>
+                        <p>All insights, information, and tools presented on our site are provided for business consulting and advisory guidance. Official client engagements for accounting, SBA loan preparation, or ERP deployment are governed by executed service contracts.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">3. Intellectual Property</div>
+                        <p>All content, designs, logos, text, graphics, and technical materials on this platform are owned by Pivot Aide or its licensors and are protected under copyright and intellectual property laws.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">4. User Responsibilities</div>
+                        <p>You agree to provide true and accurate information when contacting us or submitting inquiries. You agree not to misuse our website or attempt unauthorized access to system resources.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">5. Limitation of Liability</div>
+                        <p>Pivot Aide works diligently to ensure accurate financial guidance and software implementations. However, Pivot Aide shall not be liable for any indirect, special, or consequential damages resulting from site use.</p>
+                    </div>
+
+                    <div>
+                        <div class="privacy-section-title">6. Contact & Support</div>
+                        <p>If you have questions regarding these Terms of Service, please reach out to our legal and support team at <a href="mailto:info@pivotaide.com" style="color: var(--yellow); text-decoration: underline;">info@pivotaide.com</a>.</p>
+                    </div>
+                </div>
+                <div class="privacy-modal-footer">
+                    <button type="button" class="privacy-modal-btn" id="termsModalGotItBtn">Got It</button>
+                </div>
+            </div>
+        </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        const overlay = document.getElementById('termsOfServiceModal');
+        const closeBtn = document.getElementById('termsModalCloseBtn');
+        const gotItBtn = document.getElementById('termsModalGotItBtn');
+
+        function closeModal() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        gotItBtn.addEventListener('click', closeModal);
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
+    function openTermsModal() {
+        initTermsModal();
+        const overlay = document.getElementById('termsOfServiceModal');
+        if (overlay) {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initTermsModal();
+
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+            const text = (link.textContent || '').trim().toLowerCase();
+
+            if (text === 'terms of service' || href === '#terms' || link.classList.contains('terms-link')) {
+                e.preventDefault();
+                openTermsModal();
+            }
+        });
+    });
+})();
+
+
