@@ -233,6 +233,47 @@
             background: var(--yellow);
             border-radius: 3px;
         }
+
+        /* Partner logos row styling */
+        .partner-logos-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px 52px;
+            margin-top: 36px;
+            padding: 10px 0;
+        }
+
+        .partner-logo-img {
+            height: 42px;
+            width: auto;
+            max-width: 170px;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .partner-logos-row {
+                gap: 28px 40px;
+                margin-top: 28px;
+            }
+            .partner-logo-img {
+                height: 36px;
+                max-width: 140px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .partner-logos-row {
+                gap: 20px 28px;
+                margin-top: 24px;
+            }
+            .partner-logo-img {
+                height: 30px;
+                max-width: 120px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -298,6 +339,23 @@
                     <a href="contact.html" class="btn-ghost btn-lg">Schedule a Consultation</a>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUR PARTNERS -->
+<section class="content-section" id="our-partners" style="background: #ffffff; padding: 60px 0 40px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll" style="margin-bottom: 0;">
+            <h2 class="section-title" style="color: #0b1d39;">Our <em class="serif-italic" style="color: #b8860b;">Partners</em></h2>
+        </div>
+        <div class="partner-logos-row">
+            <img src="Drake_Tax.png" alt="Drake Tax" class="partner-logo-img">
+            <img src="Odoo_logo_rgb.svg.webp" alt="Odoo" class="partner-logo-img">
+            <img src="Intuit_QuickBooks_logo.png" alt="Intuit QuickBooks" class="partner-logo-img">
+            <img src="SBA-Logo-Stacked1.webp" alt="SBA" class="partner-logo-img" style="height: 54px; width: auto; object-fit: contain;">
+            <img src="Black-logo-no-background.png" alt="Sandbar Fund" class="partner-logo-img">
+            <img src="Ramp-Logo.png" alt="Ramp" class="partner-logo-img">
         </div>
     </div>
 </section>

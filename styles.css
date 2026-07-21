@@ -1517,8 +1517,8 @@ em.serif-italic.shimmer {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .service-card {
@@ -8049,5 +8049,47 @@ select.form-input option {
         padding: 16px 18px;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PARTNERS IN SUCCESS BANNER (Above Why Pivot Aide)
+   ═══════════════════════════════════════════════════════════════════════════ */
+.partners-banner-section {
+    padding: 60px 0 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.partners-banner-inner {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 40px rgba(74, 144, 226, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partners-banner-inner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.32), 0 0 50px rgba(74, 144, 226, 0.22);
+}
+
+.partners-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+@media (max-width: 768px) {
+    .partners-banner-section {
+        padding: 35px 0 10px 0;
+    }
+    .partners-banner-inner {
+        border-radius: 14px;
+    }
+}
+
 
 
