@@ -536,62 +536,68 @@ em.serif-italic.shimmer {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
-  box-shadow: none;
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(0px) saturate(100%);
-  -webkit-backdrop-filter: blur(0px) saturate(100%);
+  background: rgba(11, 28, 43, 0.94);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--yellow);
+}
+
+.navbar .logo-wordmark {
+  color: #FFFFFF;
+}
+
+.navbar .logo-accent {
+  color: var(--yellow);
+}
+
+.navbar .btn-ghost-nav {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar .btn-ghost-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.navbar .btn-primary-nav {
+  background: var(--yellow);
+  color: #0B1C2B;
+  font-weight: 700;
+}
+
+.navbar .btn-primary-nav:hover {
+  background: #FFF85B;
+  box-shadow: 0 0 20px rgba(234, 228, 47, 0.4);
+}
+
+.navbar .mobile-menu-toggle span {
+  background: #FFFFFF;
+}
+
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(11, 28, 43, 0.94) !important;
   backdrop-filter: blur(24px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  box-shadow: 0 1px 0 rgba(11, 29, 57, 0.08) !important;
-  border-bottom: 1px solid rgba(11, 29, 57, 0.08) !important;
-}
-
-.navbar.scrolled .nav-link {
-  color: rgba(11, 29, 57, 0.65) !important;
-}
-
-.navbar.scrolled .nav-link:hover,
-.navbar.scrolled .nav-link.active {
-  color: #0B1D39 !important;
-}
-
-.navbar.scrolled .logo-wordmark {
-  color: #0B1D39 !important;
-}
-
-.navbar.scrolled .btn-ghost-nav {
-  color: rgba(11, 29, 57, 0.75) !important;
-}
-
-.navbar.scrolled .btn-ghost-nav:hover {
-  background: rgba(11, 29, 57, 0.05) !important;
-  color: #0B1D39 !important;
-}
-
-.navbar.scrolled .btn-primary-nav {
-  background: #0B1D39 !important;
-  color: #FFFFFF !important;
-}
-
-.navbar.scrolled .btn-primary-nav:hover {
-  background: #1D3B55 !important;
-}
-
-.navbar.scrolled .mobile-menu-toggle span {
-  background: #0B1D39 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .nav-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
-  height: 70px;
+  height: 76px;
   display: flex;
   align-items: center;
 }
@@ -599,25 +605,77 @@ em.serif-italic.shimmer {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px !important;
   text-decoration: none;
   flex-shrink: 0;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  cursor: default !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.nav-logo:hover {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: default !important;
 }
 
 .logo-mark {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.logo-mark img {
+  width: 44px !important;
+  height: 44px !important;
+  object-fit: contain !important;
+  display: block;
+  border-radius: 10px !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.nav-logo:hover .logo-mark img {
+  transform: none !important;
 }
 
 .logo-wordmark {
-  font-size: 19px;
-  font-weight: var(--fw-extrabold);
-  color: var(--text-primary);
-  letter-spacing: var(--ls-subhead);
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.01em !important;
+  margin-left: 4px !important;
 }
 
 .logo-accent {
-  color: var(--yellow);
+  color: var(--yellow) !important;
+  margin-left: 2px !important;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    height: 68px;
+    padding: 0 16px;
+  }
+  .nav-logo {
+    padding: 0 !important;
+    gap: 10px !important;
+    border: none !important;
+  }
+  .logo-mark img {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+  }
+  .logo-wordmark {
+    font-size: 19px !important;
+  }
 }
 
 .nav-links {
@@ -709,6 +767,238 @@ em.serif-italic.shimmer {
 
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+/* NAVBAR DROPDOWN MENU */
+.nav-item-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item-dropdown .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-chevron {
+  width: 10px;
+  height: 10px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), stroke 0.3s ease;
+  flex-shrink: 0;
+  stroke-width: 2.5;
+}
+
+.nav-item-dropdown:hover .dropdown-chevron,
+.nav-item-dropdown.active .dropdown-chevron,
+.nav-item-dropdown.open .dropdown-chevron,
+.nav-item-dropdown.is-active .dropdown-chevron {
+  transform: rotate(180deg);
+  stroke: var(--yellow);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(14px) scale(0.95);
+  background: rgba(11, 28, 43, 0.98) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 16px;
+  padding: 12px;
+  width: 320px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(234, 228, 47, 0.12) !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.35s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+  margin-top: 8px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown:focus-within .nav-dropdown-menu,
+.nav-item-dropdown.open .nav-dropdown-menu,
+.nav-item-dropdown.is-active .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+  border-color: rgba(234, 228, 47, 0.4) !important;
+}
+
+.nav-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, border-left 0.2s ease;
+}
+
+.nav-item-dropdown:hover .nav-dropdown-item,
+.nav-item-dropdown:focus-within .nav-dropdown-item,
+.nav-item-dropdown.open .nav-dropdown-item,
+.nav-item-dropdown.is-active .nav-dropdown-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-item-dropdown:hover .nav-dropdown-item:nth-child(1),
+.nav-item-dropdown.open .nav-dropdown-item:nth-child(1) { transition-delay: 0.04s, 0.04s, 0s, 0s; }
+.nav-item-dropdown:hover .nav-dropdown-item:nth-child(2),
+.nav-item-dropdown.open .nav-dropdown-item:nth-child(2) { transition-delay: 0.08s, 0.08s, 0s, 0s; }
+.nav-item-dropdown:hover .nav-dropdown-item:nth-child(3),
+.nav-item-dropdown.open .nav-dropdown-item:nth-child(3) { transition-delay: 0.12s, 0.12s, 0s, 0s; }
+.nav-item-dropdown:hover .nav-dropdown-item:nth-child(4),
+.nav-item-dropdown.open .nav-dropdown-item:nth-child(4) { transition-delay: 0.16s, 0.16s, 0s, 0s; }
+
+.nav-dropdown-item-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-dropdown-item-title span {
+  color: var(--yellow);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+}
+
+.nav-dropdown-item-desc {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.7) !important;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(234, 228, 47, 0.12) !important;
+  transform: translateX(6px) !important;
+  border-left: 3px solid var(--yellow);
+}
+
+.nav-dropdown-item:hover .nav-dropdown-item-title {
+  color: var(--yellow) !important;
+}
+
+.nav-dropdown-item:hover .nav-dropdown-item-title span {
+  transform: translateX(6px) scale(1.2);
+}
+
+.nav-dropdown-item:hover .nav-dropdown-item-desc {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.nav-dropdown-item.active {
+  background: rgba(234, 228, 47, 0.12) !important;
+  border-left: 3px solid var(--yellow);
+}
+
+.nav-dropdown-item.active .nav-dropdown-item-title {
+  color: var(--yellow) !important;
+}
+
+/* Mobile Dropdown Sub-menu Accordion */
+.mobile-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 2px 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.mobile-dropdown-container.open {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(234, 228, 47, 0.3);
+}
+
+.mobile-dropdown-container .mobile-link,
+.mobile-dropdown-trigger {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  padding: 4px 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mobile-chevron {
+  width: 14px;
+  height: 14px;
+  stroke: var(--yellow);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+.mobile-dropdown-container.open .mobile-chevron {
+  transform: rotate(180deg);
+}
+
+.mobile-sub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-left: 2px solid var(--yellow);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin 0.35s ease;
+}
+
+.mobile-dropdown-container.open .mobile-sub-links {
+  max-height: 350px;
+  opacity: 1;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.mobile-sublink {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75) !important;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-sublink:hover,
+.mobile-sublink.active {
+  color: var(--yellow) !important;
+  background: rgba(234, 228, 47, 0.12) !important;
+  font-weight: 600;
 }
 
 .nav-actions {
@@ -3557,8 +3847,16 @@ em.serif-italic.shimmer {
 ════════════════════════════ */
 .footer {
   background: var(--steel-700);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 80px 0 32px;
+  position: relative;
+}
+
+.footer .animate-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
 }
 
 .footer-grid {
@@ -3571,11 +3869,32 @@ em.serif-italic.shimmer {
 .footer-logo {
   margin-bottom: 14px;
   display: inline-flex;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  align-items: center;
+  gap: 16px !important;
+  text-decoration: none;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  cursor: default !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.footer-logo .logo-wordmark {
+  margin-left: 4px !important;
+}
+
+.footer-logo .logo-accent {
+  margin-left: 2px !important;
 }
 
 .footer-logo:hover {
-  transform: scale(1.04) rotate(-1.5deg);
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: default !important;
 }
 
 .footer-brand-desc {
@@ -4767,27 +5086,38 @@ body.menu-open::before {
   left: 0;
   bottom: 0;
   width: 340px;
-  max-width: 100vw;
+  max-width: 88vw;
   height: 100vh;
   z-index: 1001;
-  background: rgba(11, 28, 43, 0.95);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-right: 1px solid var(--border-light);
-  padding: 90px 24px 40px;
+  background: rgba(11, 28, 43, 0.98);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 80px 20px 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 16px;
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
   pointer-events: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.open {
   transform: translateX(0);
   opacity: 1;
   pointer-events: all;
+}
+
+/* Hide AI Chat Widget when mobile menu is open */
+body.menu-open #aiChatWidget,
+body.menu-open .ai-chat-widget {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
 }
 
 /* Link stagger transitions */
@@ -4831,6 +5161,9 @@ body.menu-open::before {
   transform: translateX(-20px);
   transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: 500ms;
+  margin-top: 16px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 .mobile-menu.open .mobile-cta {
@@ -5318,16 +5651,10 @@ body.menu-open::before {
 ════════════════════════════ */
 .footer-top-border {
   height: 1px;
-  background: linear-gradient(90deg,
-      transparent,
-      var(--steel-400) 25%,
-      var(--yellow) 50%,
-      var(--steel-400) 75%,
-      transparent);
-  background-size: 200% 100%;
-  opacity: 0.45;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1;
   margin-bottom: 0;
-  animation: footerBorderSweep 8s linear infinite;
+  animation: none !important;
 }
 
 @keyframes footerBorderSweep {
@@ -8091,6 +8418,882 @@ select.form-input option {
     .partners-banner-inner {
         border-radius: 14px;
     }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   OUR PARTNERS SECTION & LOGO GRID
+   ═══════════════════════════════════════════════════════════════════════════ */
+.partners-section {
+  padding: 60px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.partner-logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.partner-logo-tile {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 12px 24px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 140px;
+}
+
+.partner-logo-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+.partner-logo-img {
+  max-height: 34px;
+  max-width: 130px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: contrast(105%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   QUICKBOOKS MIGRATION HERO BADGE
+   ═══════════════════════════════════════════════════════════════════════════ */
+.qb-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 24px 8px 16px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qb-badge-wrap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.qb-badge-wrap img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.qb-badge-text {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #0B1C2B;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROCESS & TRAINING STEP CARDS ("MAKE THIS BOX")
+   ═══════════════════════════════════════════════════════════════════════════ */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.process-card {
+  position: relative;
+  background: rgba(15, 29, 49, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s ease, 
+              background 0.35s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  background: rgba(20, 38, 64, 0.9);
+  border-color: rgba(234, 228, 47, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 
+              0 0 25px rgba(234, 228, 47, 0.15), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.process-step-num {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--yellow);
+  background: rgba(234, 228, 47, 0.12);
+  border: 1px solid rgba(234, 228, 47, 0.35);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 12px rgba(234, 228, 47, 0.15);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.process-card:hover .process-step-num {
+  transform: scale(1.08);
+  background: rgba(234, 228, 47, 0.22);
+  border-color: var(--yellow);
+}
+
+.process-card h3 {
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  margin-bottom: 12px !important;
+  line-height: 1.35 !important;
+}
+
+.process-card p {
+  font-size: 14.5px !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+
+/* -------------------------------------------------------------------
+   WHAT HAPPENS NEXT — ENHANCED 5 STEPS BOXES & ANIMATIONS
+   ------------------------------------------------------------------- */
+#what-happens-next .container {
+  max-width: 1440px !important;
+}
+
+.workflow-5-grid,
+#what-happens-next .scroll-reveal {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 20px !important;
+  margin-top: 50px !important;
+}
+
+#what-happens-next .scroll-reveal > div,
+.workflow-5-grid > div {
+  padding: 32px 24px !important;
+  min-height: 250px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--card-radius) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              background 0.4s ease !important;
+  cursor: pointer;
+}
+
+/* Glowing top accent line on hover */
+#what-happens-next .scroll-reveal > div::before,
+.workflow-5-grid > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+/* Hover state animation */
+#what-happens-next .scroll-reveal > div:hover,
+.workflow-5-grid > div:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  border-color: rgba(234, 228, 47, 0.6) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 30px rgba(234, 228, 47, 0.2) !important;
+  background: rgba(15, 34, 53, 0.95) !important;
+}
+
+#what-happens-next .scroll-reveal > div:hover::before,
+.workflow-5-grid > div:hover::before {
+  transform: scaleX(1);
+}
+
+/* Step Number Badge Styling & Hover Animation */
+#what-happens-next .scroll-reveal > div > div:first-child,
+.workflow-5-grid > div > div:first-child {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 50% !important;
+  background: rgba(234, 228, 47, 0.15) !important;
+  color: var(--yellow) !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+  border: 1px solid rgba(234, 228, 47, 0.25) !important;
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease !important;
+}
+
+#what-happens-next .scroll-reveal > div:hover > div:first-child,
+.workflow-5-grid > div:hover > div:first-child {
+  transform: scale(1.15) rotate(6deg) !important;
+  background: var(--yellow) !important;
+  color: #0b1c2b !important;
+  box-shadow: 0 0 20px rgba(234, 228, 47, 0.6) !important;
+}
+
+/* Card Heading Styling */
+#what-happens-next .scroll-reveal > div h3,
+.workflow-5-grid > div h3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 12px !important;
+  transition: color 0.3s ease !important;
+}
+
+#what-happens-next .scroll-reveal > div:hover h3,
+.workflow-5-grid > div:hover h3 {
+  color: var(--yellow) !important;
+}
+
+/* Card Description Styling */
+#what-happens-next .scroll-reveal > div p,
+.workflow-5-grid > div p {
+  font-size: 14px !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  #what-happens-next .scroll-reveal > div,
+  .workflow-5-grid > div {
+    padding: 24px 16px !important;
+    min-height: 230px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .workflow-5-grid,
+  #what-happens-next .scroll-reveal {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .workflow-5-grid,
+  #what-happens-next .scroll-reveal {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* -------------------------------------------------------------------
+   WHAT YOU GAIN — 4 CARDS IN ONE LINE WITH ANIMATIONS
+   ------------------------------------------------------------------- */
+#what-you-gain .container {
+  max-width: 1440px !important;
+}
+
+#what-you-gain .services-grid,
+.workflow-4-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+  margin-top: 40px !important;
+}
+
+#what-you-gain .service-card,
+.workflow-4-grid > div {
+  padding: 32px 24px !important;
+  min-height: 250px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--card-radius) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              background 0.4s ease !important;
+  cursor: pointer;
+}
+
+/* Glowing top accent line on hover */
+#what-you-gain .service-card::before,
+.workflow-4-grid > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+/* Hover state animation */
+#what-you-gain .service-card:hover,
+.workflow-4-grid > div:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  border-color: rgba(234, 228, 47, 0.6) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 30px rgba(234, 228, 47, 0.2) !important;
+  background: rgba(15, 34, 53, 0.95) !important;
+}
+
+#what-you-gain .service-card:hover::before,
+.workflow-4-grid > div:hover::before {
+  transform: scaleX(1);
+}
+
+/* Icon Wrap Animation */
+#what-you-gain .service-card .sc-icon-wrap,
+.workflow-4-grid .sc-icon-wrap {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 12px !important;
+  background: rgba(234, 228, 47, 0.15) !important;
+  color: var(--yellow) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+  border: 1px solid rgba(234, 228, 47, 0.25) !important;
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease !important;
+}
+
+#what-you-gain .service-card:hover .sc-icon-wrap,
+.workflow-4-grid > div:hover .sc-icon-wrap {
+  transform: scale(1.15) rotate(6deg) !important;
+  background: var(--yellow) !important;
+  color: #0b1c2b !important;
+  box-shadow: 0 0 20px rgba(234, 228, 47, 0.6) !important;
+}
+
+/* Title & Desc Hover Transitions */
+#what-you-gain .service-card:hover .sc-title,
+.workflow-4-grid > div:hover .sc-title {
+  color: var(--yellow) !important;
+}
+
+@media (max-width: 1100px) {
+  #what-you-gain .services-grid,
+  .workflow-4-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #what-you-gain .services-grid,
+  .workflow-4-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* -------------------------------------------------------------------
+   MIGRATION PLATFORMS — 2 BOXES UP, 2 BOXES DOWN (2x2 GRID)
+   ------------------------------------------------------------------- */
+#migration-platforms .services-grid,
+.workflow-2x2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 24px !important;
+  margin-top: 40px !important;
+}
+
+@media (max-width: 768px) {
+  #migration-platforms .services-grid,
+  .workflow-2x2-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* -------------------------------------------------------------------
+   THIRD PARTY CONNECTED SYSTEMS — 3 BOXES UP, 3 BOXES DOWN (3x2 GRID)
+   ------------------------------------------------------------------- */
+#third-party .container {
+  max-width: 1440px !important;
+}
+
+#third-party .scroll-reveal,
+.workflow-3x2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  margin-top: 40px !important;
+}
+
+#third-party .scroll-reveal > div,
+.workflow-3x2-grid > div {
+  padding: 32px 24px !important;
+  min-height: 250px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--card-radius) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              background 0.4s ease !important;
+  cursor: pointer;
+}
+
+/* Glowing top accent line on hover */
+#third-party .scroll-reveal > div::before,
+.workflow-3x2-grid > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+/* Hover state animation */
+#third-party .scroll-reveal > div:hover,
+.workflow-3x2-grid > div:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  border-color: rgba(234, 228, 47, 0.6) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 30px rgba(234, 228, 47, 0.2) !important;
+  background: rgba(15, 34, 53, 0.95) !important;
+}
+
+#third-party .scroll-reveal > div:hover::before,
+.workflow-3x2-grid > div:hover::before {
+  transform: scaleX(1);
+}
+
+@media (max-width: 1024px) {
+  #third-party .scroll-reveal,
+  .workflow-3x2-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #third-party .scroll-reveal,
+  .workflow-3x2-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* -------------------------------------------------------------------
+   MENU PAGES GLOBAL SCROLL & HOVER ANIMATIONS
+   ------------------------------------------------------------------- */
+
+/* 1. Scroll Entrance Animations for Section Headers & Cards */
+.animate-on-scroll,
+.scroll-reveal,
+.service-card,
+.process-card,
+.roi-card {
+  opacity: 0;
+  transform: translateY(35px) scale(0.98);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease,
+              background 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.in-view,
+.scroll-reveal.in-view,
+.service-card.in-view,
+.process-card.in-view,
+.roi-card.in-view,
+.animate-on-scroll.visible,
+.scroll-reveal.visible,
+.service-card.visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Stagger delay for cards inside grid container */
+.services-grid > div:nth-child(1), .scroll-reveal > div:nth-child(1) { transition-delay: 0.05s; }
+.services-grid > div:nth-child(2), .scroll-reveal > div:nth-child(2) { transition-delay: 0.12s; }
+.services-grid > div:nth-child(3), .scroll-reveal > div:nth-child(3) { transition-delay: 0.19s; }
+.services-grid > div:nth-child(4), .scroll-reveal > div:nth-child(4) { transition-delay: 0.26s; }
+.services-grid > div:nth-child(5), .scroll-reveal > div:nth-child(5) { transition-delay: 0.33s; }
+.services-grid > div:nth-child(6), .scroll-reveal > div:nth-child(6) { transition-delay: 0.40s; }
+
+/* 2. Micro Hover Animations for All Service Cards */
+.service-card {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+/* Glowing top border line highlight on hover */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  border-color: rgba(234, 228, 47, 0.5) !important;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35), 0 0 35px rgba(234, 228, 47, 0.18) !important;
+}
+
+/* Icon / Badge Animation inside service cards */
+.service-card .sc-icon-wrap,
+.service-card svg,
+.service-card div[style*="border-radius:50%"],
+.service-card div[style*="border-radius:8px"],
+.service-card div[style*="border-radius:12px"] {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              background 0.4s ease, 
+              box-shadow 0.4s ease,
+              color 0.4s ease !important;
+}
+
+.service-card:hover .sc-icon-wrap,
+.service-card:hover svg,
+.service-card:hover div[style*="border-radius:50%"],
+.service-card:hover div[style*="border-radius:8px"],
+.service-card:hover div[style*="border-radius:12px"] {
+  transform: scale(1.18) rotate(5deg) !important;
+  color: var(--yellow) !important;
+}
+
+/* Title text color transition on hover */
+.service-card:hover h3,
+.service-card:hover .sc-title {
+  color: var(--yellow) !important;
+}
+
+/* Feature list bullets animation on hover */
+.service-card ul li,
+.service-card .sc-features li {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.service-card:hover ul li,
+.service-card:hover .sc-features li {
+  transform: translateX(4px);
+  color: var(--text-primary) !important;
+}
+
+/* 3. Section Tag Glow Animation */
+.section-tag {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--yellow) !important;
+  box-shadow: 0 0 16px rgba(234, 228, 47, 0.3) !important;
+}
+
+.section-tag-dot {
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+/* 4. CTA Buttons Micro-Animations */
+.btn-primary,
+.btn-ghost {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.35s ease, 
+              background 0.35s ease, 
+              border-color 0.35s ease !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 14px 30px rgba(234, 228, 47, 0.4) !important;
+}
+
+.btn-ghost:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 14px 30px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* -------------------------------------------------------------------
+   MODULE PILLS & FREE CONSULTATION FORM ANIMATIONS
+   ------------------------------------------------------------------- */
+
+/* 5. Module / Pill Badge Animations */
+.mod-pill,
+.service-card div[style*="border-radius:20px"],
+.service-card span[style*="border-radius:20px"] {
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.service-card:hover .mod-pill,
+.service-card:hover div[style*="border-radius:20px"],
+.service-card:hover span[style*="border-radius:20px"],
+.mod-pill:hover {
+  transform: scale(1.08) translateY(-1px) !important;
+  background: rgba(234, 228, 47, 0.22) !important;
+  border-color: rgba(234, 228, 47, 0.5) !important;
+  color: var(--yellow) !important;
+  box-shadow: 0 0 16px rgba(234, 228, 47, 0.35) !important;
+}
+
+/* 6. Free Consultation Section & Form Animations */
+#free-consultation .two-col-grid > div,
+#free-consultation form,
+#free-consultation div[style*="background:var(--bg-card)"] {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease !important;
+}
+
+#free-consultation .two-col-grid > div:hover,
+#free-consultation div[style*="background:var(--bg-card)"]:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(234, 228, 47, 0.4) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 0 0 25px rgba(234, 228, 47, 0.12) !important;
+}
+
+/* Form Input Focus Glow Animations */
+#free-consultation input,
+#free-consultation select,
+#free-consultation textarea,
+.form-input,
+.form-select {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+
+#free-consultation input:focus,
+#free-consultation select:focus,
+#free-consultation textarea:focus,
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--yellow) !important;
+  box-shadow: 0 0 18px rgba(234, 228, 47, 0.35) !important;
+  transform: translateY(-2px) !important;
+  outline: none !important;
+}
+
+/* Submit Button Hover Pulse */
+#free-consultation button[type="submit"],
+#free-consultation .btn-primary,
+#free-consultation button {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease !important;
+}
+
+#free-consultation button[type="submit"]:hover,
+#free-consultation .btn-primary:hover,
+#free-consultation button:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 30px rgba(234, 228, 47, 0.45) !important;
+}
+
+/* -------------------------------------------------------------------
+   QUICKBOOKS MIGRATION PAGE SPECIFIC ANIMATIONS
+   ------------------------------------------------------------------- */
+
+/* 7. Hero Badge Animation */
+.qb-badge-wrap {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease !important;
+  cursor: pointer;
+}
+
+.qb-badge-wrap:hover {
+  transform: translateY(-5px) scale(1.03) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(234, 228, 47, 0.3) !important;
+  border-color: var(--yellow) !important;
+}
+
+.qb-badge-wrap img {
+  transition: transform 0.4s ease;
+}
+
+.qb-badge-wrap:hover img {
+  transform: scale(1.08);
+}
+
+/* 8. Process Grid Cards & Step Numbers */
+.process-card {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              background 0.4s ease !important;
+}
+
+.process-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.process-card:hover::before {
+  transform: scaleX(1);
+}
+
+.process-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(234, 228, 47, 0.5) !important;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(234, 228, 47, 0.15) !important;
+}
+
+.process-step-num {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s ease, text-shadow 0.4s ease !important;
+  display: inline-block;
+}
+
+.process-card:hover .process-step-num {
+  transform: scale(1.18) rotate(4deg) !important;
+  color: var(--yellow) !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 16px rgba(234, 228, 47, 0.5);
+}
+
+/* 9. Comparison Table Wrap & Row Hover Effects */
+.comparison-table-wrap {
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.comparison-table-wrap:hover {
+  border-color: rgba(234, 228, 47, 0.35) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), 0 0 30px rgba(234, 228, 47, 0.1) !important;
+}
+
+.comp-table tbody tr {
+  transition: background 0.25s ease, transform 0.25s ease !important;
+}
+
+.comp-table tbody tr:hover {
+  background: rgba(234, 228, 47, 0.06) !important;
+}
+
+.comp-table tbody tr:hover .check-badge {
+  transform: scale(1.25);
+  display: inline-block;
+  transition: transform 0.25s ease;
+  color: #52e0a2 !important;
+  text-shadow: 0 0 10px rgba(82, 224, 162, 0.5);
+}
+
+.comp-table tbody tr:hover .cross-badge {
+  transform: scale(1.25);
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* -------------------------------------------------------------------
+   WHAT TO EXPECT LIST & FORM BUTTON ANIMATIONS
+   ------------------------------------------------------------------- */
+
+/* 10. What to Expect List Micro-Animations */
+div[style*="border-top"] ul li,
+.what-to-expect-list li {
+  transition: transform 0.3s ease, color 0.3s ease !important;
+  cursor: pointer;
+}
+
+div[style*="border-top"] ul li:hover,
+.what-to-expect-list li:hover {
+  transform: translateX(6px) !important;
+  color: var(--text-primary) !important;
+}
+
+div[style*="border-top"] ul li strong,
+.what-to-expect-list li strong {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), text-shadow 0.3s ease !important;
+  display: inline-block;
+}
+
+div[style*="border-top"] ul li:hover strong,
+.what-to-expect-list li:hover strong {
+  transform: scale(1.25) rotate(3deg) !important;
+  text-shadow: 0 0 12px rgba(234, 228, 47, 0.6) !important;
+}
+
+/* 11. Form Inputs & Submit Buttons Global Animations */
+form input,
+form select,
+form textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--yellow) !important;
+  box-shadow: 0 0 18px rgba(234, 228, 47, 0.35) !important;
+  transform: translateY(-2px) !important;
+  outline: none !important;
+}
+
+form button[type="submit"],
+form .btn-primary,
+form button {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease !important;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover,
+form .btn-primary:hover,
+form button:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 14px 32px rgba(234, 228, 47, 0.45) !important;
 }
 
 

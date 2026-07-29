@@ -28,8 +28,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=Instrument+Serif:ital@1&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="logo_transparent.png">
+    <link rel="shortcut icon" type="image/png" href="logo_transparent.png">
+    <link rel="apple-touch-icon" href="logo_transparent.png">
 </head>
 
 <body>
@@ -38,52 +39,106 @@
     <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" id="navLogo">
+            <a href="javascript:void(0)" class="nav-logo" id="navLogo">
                 <div class="logo-mark">
-                    <img src="logo_image.jpg" alt="Pivot Aide Logo"
-                        style="width: 36px; height: 36px; border-radius: 9px; object-fit: cover; display: block;">
+                    <img src="logo_transparent.png" alt="Pivot Aide Logo" style="width: 44px; height: 44px; object-fit: contain; display: block;">
                 </div>
                 <span class="logo-wordmark">Pivot<span class="logo-accent">Aide</span></span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link active" id="navHome">Home</a>
                 <a href="about.html" class="nav-link" id="navAbout">About</a>
-                <a href="accounting.html" class="nav-link" id="navAccounting">Accounting</a>
-                <a href="odoo.html" class="nav-link" id="navOdoo">Odoo ERP</a>
+                <div class="nav-item-dropdown">
+                    <a href="accounting.html" class="nav-link" id="navAccounting">
+                        Accounting
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">General Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Bookkeeping, tax compliance &amp; advisory</span>
+                        </a>
+                        <a href="odoo-accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Odoo Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Certified partner ERP setup &amp; bank sync</span>
+                        </a>
+                        <a href="quickbooks-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">QuickBooks Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Zero-downtime data migration to Odoo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="odoo.html" class="nav-link" id="navOdoo">
+                        Odoo ERP
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="odoo.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What is Odoo <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Modular platform overview &amp; capabilities</span>
+                        </a>
+                        <a href="odoo-what-we-do.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What We Do <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Custom Odoo development &amp; tailored workflows</span>
+                        </a>
+                        <a href="odoo-integration-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Integration &amp; Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Connect systems &amp; zero-downtime data cutover</span>
+                        </a>
+                        <a href="odoo-training-documentation.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Training and Documentation <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Role-based training &amp; custom SOP manuals</span>
+                        </a>
+                    </div>
+                </div>
                 <a href="funding.html" class="nav-link" id="navFunding">Funding</a>
+                <a href="blog.html" class="nav-link" id="navBlog">Blog</a>
                 <a href="contact.html" class="nav-link" id="navContact">Contact</a>
             </div>
             <div class="nav-actions">
-                <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener"
-                    class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
-                        <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
+                <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener" class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     Get a Free Consultation Call
                 </a>
             </div>
-            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
+    <!-- MOBILE DRAWER -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-links">
-            <a href="index.html" class="mobile-link">Home</a>
+            <a href="index.html" class="mobile-link active">Home</a>
             <a href="about.html" class="mobile-link">About</a>
-            <a href="accounting.html" class="mobile-link">Accounting</a>
-            <a href="odoo.html" class="mobile-link">Odoo ERP</a>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Accounting
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="accounting.html" class="mobile-sublink">General Accounting</a>
+                    <a href="odoo-accounting.html" class="mobile-sublink">Odoo Accounting</a>
+                    <a href="quickbooks-migration.html" class="mobile-sublink">QuickBooks Migration</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Odoo ERP
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="odoo.html" class="mobile-sublink">What is Odoo</a>
+                    <a href="odoo-what-we-do.html" class="mobile-sublink">What We Do</a>
+                    <a href="odoo-integration-migration.html" class="mobile-sublink">Integration &amp; Migration</a>
+                    <a href="odoo-training-documentation.html" class="mobile-sublink">Training and Documentation</a>
+                </div>
+            </div>
             <a href="funding.html" class="mobile-link">Funding Readiness</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
             <a href="contact.html" class="mobile-link">Contact</a>
         </div>
-        <div class="mobile-cta">
-            <a href="contact.html" class="btn-primary btn-lg" style="width:100%;justify-content:center;"
-                id="mobileGetStarted">Schedule a Consultation</a>
-        </div>
+        <div class="mobile-cta"><a href="contact.html" class="btn-primary btn-lg" style="width:100%;justify-content:center;">Schedule a Consultation</a></div>
     </div>
 
     <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
@@ -217,6 +272,23 @@
             <div class="partners-banner-inner animate-on-scroll">
                 <img src="banner.png" alt="We are your partners in success - Four Pillars of Financial Excellence"
                     class="partners-banner-img" loading="lazy" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ OUR PARTNERS ═══════════════════════════ -->
+    <section class="partners-section" id="our-partners">
+        <div class="container">
+            <div class="section-header animate-on-scroll" style="margin-bottom: 0;">
+                <h2 class="section-title">Our <em class="serif-italic">Partners</em></h2>
+            </div>
+            <div class="partner-logos-grid scroll-reveal">
+                <div class="partner-logo-tile"><img src="Drake_Tax.png" alt="Drake Tax" class="partner-logo-img"></div>
+                <div class="partner-logo-tile"><img src="Odoo_logo_rgb.svg.webp" alt="Odoo" class="partner-logo-img"></div>
+                <div class="partner-logo-tile"><img src="Intuit_QuickBooks_logo.png" alt="Intuit QuickBooks" class="partner-logo-img"></div>
+                <div class="partner-logo-tile"><img src="SBA-Logo-Stacked1.webp" alt="SBA" class="partner-logo-img"></div>
+                <div class="partner-logo-tile"><img src="Black-logo-no-background.png" alt="Sandbar Fund" class="partner-logo-img"></div>
+                <div class="partner-logo-tile"><img src="Ramp-Logo.png" alt="Ramp" class="partner-logo-img"></div>
             </div>
         </div>
     </section>
@@ -766,7 +838,7 @@
         <div class="section-glow sg-center"></div>
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <div class="section-tag"><span class="section-tag-dot"></span>Packages</div>
+                <div class="section-tag"><span class="section-tag-dot"></span>General Accounting</div>
                 <h2 class="section-title">Transparent, <em class="serif-italic">Scalable</em> Pricing</h2>
                 <p class="section-subtitle">Structured service packages designed to grow with your business — no hidden
                     fees, no surprises, just results.</p>
@@ -1109,9 +1181,8 @@
             <div class="footer-grid">
                 <!-- Brand Column -->
                 <div class="footer-brand animate-on-scroll fade-left">
-                    <a href="index.html" class="footer-logo">
-                        <img src="logo_image.jpg" alt="Pivot Aide Logo"
-                            style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover; display: block;">
+                    <a href="javascript:void(0)" class="footer-logo">
+                        <img src="logo_transparent.png" alt="Pivot Aide Logo" style="width: 34px; height: 34px; border-radius: 8px; object-fit: contain; display: block;">
                         <span
                             style="font-size:18px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-left:8px;">Pivot<span
                                 style="color:var(--yellow);">Aide</span></span>
@@ -1129,8 +1200,9 @@
                 <div class="footer-col animate-on-scroll scale-in" data-delay="80">
                     <div class="footer-col-title">Services</div>
                     <ul class="footer-link-list">
-                        <li><a href="accounting.html">Accounting &amp; Bookkeeping</a></li>
-                        <li><a href="odoo.html">Odoo Accounting</a></li>
+                        <li><a href="accounting.html">General Accounting</a></li>
+                        <li><a href="odoo-accounting.html">Odoo Accounting</a></li>
+                        <li><a href="quickbooks-migration.html">QuickBooks Migration</a></li>
                         <li><a href="funding.html">Funding Readiness</a></li>
                     </ul>
                 </div>
@@ -1227,8 +1299,7 @@
         <div class="ai-chat-panel" id="aiChatPanel">
             <div class="ai-chat-header">
                 <div class="ai-avatar">
-                    <img src="logo_image.jpg" alt="Pivot Aide Assistant"
-                        style="width: 18px; height: 18px; border-radius: 4px; object-fit: cover; display: block;">
+                    <img src="logo_transparent.png" alt="Pivot Aide Assistant" style="width: 22px; height: 22px; border-radius: 5px; object-fit: contain; display: block;">
                 </div>
                 <div class="ai-header-info">
                     <strong>Pivot Aide Assistant</strong>
@@ -1280,8 +1351,8 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

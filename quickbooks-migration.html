@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPSL105CH3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JPSL105CH3');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBooks Migration Services — Pivot Aide</title>
+    <meta name="description" content="Seamless zero-downtime QuickBooks Online &amp; Desktop migration to Odoo ERP. We handle data cleaning, chart of accounts mapping, historical ledger transfer, and reconciliation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo_transparent.png">
+    <link rel="shortcut icon" type="image/png" href="logo_transparent.png">
+    <link rel="apple-touch-icon" href="logo_transparent.png">
+    <style>
+        .qb-badge-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 8px 24px 8px 16px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .qb-badge-wrap:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+        }
+        .qb-badge-wrap img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        .qb-badge-text {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #0B1C2B;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--card-radius);
+            padding: 32px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .process-card:hover {
+            border-color: var(--yellow);
+            transform: translateY(-4px);
+        }
+        .process-step-num {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--yellow);
+            opacity: 0.8;
+            margin-bottom: 12px;
+            font-family: 'Inter', sans-serif;
+        }
+        .comparison-table-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+            margin-top: 40px;
+        }
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .comp-table th, .comp-table td {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 14px;
+        }
+        .comp-table th {
+            background: rgba(255,255,255,0.03);
+            font-weight: 700;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+        }
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-badge {
+            color: #52e0a2;
+            font-weight: 700;
+        }
+        .cross-badge {
+            color: #ff6b6b;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<div class="scroll-progress-bar" id="scrollProgress"></div>
+
+<!-- NAVBAR -->
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="nav-logo" id="navLogo">
+                <div class="logo-mark">
+                    <img src="logo_transparent.png" alt="Pivot Aide Logo" style="width: 44px; height: 44px; object-fit: contain; display: block;">
+                </div>
+                <span class="logo-wordmark">Pivot<span class="logo-accent">Aide</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link" id="navHome">Home</a>
+                <a href="about.html" class="nav-link" id="navAbout">About</a>
+                <div class="nav-item-dropdown">
+                    <a href="accounting.html" class="nav-link active" id="navAccounting">
+                        Accounting
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">General Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Bookkeeping, tax compliance &amp; advisory</span>
+                        </a>
+                        <a href="odoo-accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Odoo Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Certified partner ERP setup &amp; bank sync</span>
+                        </a>
+                        <a href="quickbooks-migration.html" class="nav-dropdown-item active">
+                            <span class="nav-dropdown-item-title">QuickBooks Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Zero-downtime data migration to Odoo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="odoo.html" class="nav-link" id="navOdoo">
+                        Odoo ERP
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="odoo.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What is Odoo <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Modular platform overview &amp; capabilities</span>
+                        </a>
+                        <a href="odoo-what-we-do.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What We Do <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Custom Odoo development &amp; tailored workflows</span>
+                        </a>
+                        <a href="odoo-integration-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Integration &amp; Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Connect systems &amp; zero-downtime data cutover</span>
+                        </a>
+                        <a href="odoo-training-documentation.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Training and Documentation <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Role-based training &amp; custom SOP manuals</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="funding.html" class="nav-link" id="navFunding">Funding</a>
+                <a href="blog.html" class="nav-link" id="navBlog">Blog</a>
+                <a href="contact.html" class="nav-link" id="navContact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener" class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Get a Free Consultation Call
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Accounting
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="accounting.html" class="mobile-sublink">General Accounting</a>
+                    <a href="odoo-accounting.html" class="mobile-sublink">Odoo Accounting</a>
+                    <a href="quickbooks-migration.html" class="mobile-sublink active">QuickBooks Migration</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Odoo ERP
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="odoo.html" class="mobile-sublink">What is Odoo</a>
+                    <a href="odoo-what-we-do.html" class="mobile-sublink">What We Do</a>
+                    <a href="odoo-integration-migration.html" class="mobile-sublink">Integration &amp; Migration</a>
+                    <a href="odoo-training-documentation.html" class="mobile-sublink">Training and Documentation</a>
+                </div>
+            </div>
+            <a href="funding.html" class="mobile-link">Funding Readiness</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="mobile-cta"><a href="contact.html" class="btn-primary btn-lg" style="width:100%;justify-content:center;">Schedule a Consultation</a></div>
+    </div>
+
+    <!-- HERO SECTION -->
+<section class="page-hero centered">
+    <div class="page-hero-bg">
+        <video autoplay loop muted playsinline class="page-hero-bg-video">
+            <source src="Accounting/accounting_animation.mp4" type="video/mp4">
+        </video>
+        <div class="page-hero-orb page-hero-orb-1"></div>
+        <div class="page-hero-orb page-hero-orb-2"></div>
+        <div class="page-hero-grid"></div>
+        <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="page-hero-wrapper">
+            <div class="page-hero-content">
+                <div class="qb-badge-wrap animate-fade-in-up delay-100">
+                    <img src="Intuit_QuickBooks_logo.png" alt="QuickBooks Logo">
+                    <span class="qb-badge-text">QuickBooks to Odoo Migration</span>
+                </div>
+                <h1 class="page-hero-title animate-fade-in-up delay-200">You've Outgrown QuickBooks.<br><em class="serif-italic">We'll Move You Forward.</em></h1>
+                <p class="page-hero-sub animate-fade-in-up delay-300">QuickBooks is a great starting point — but as your business grows, it runs out of runway. Odoo gives you the integrated, scalable platform to manage every part of your business in one place.</p>
+                <div class="page-hero-actions animate-fade-in-up delay-400">
+                    <a href="contact.html" class="btn-primary btn-lg">Request Migration Assessment →</a>
+                    <a href="#migration-process" class="btn-ghost btn-lg">Explore Migration Process</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MIGRATION PROCESS SECTION -->
+<section class="content-section light" id="migration-process" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>Our Migration Process</div>
+            <h2 class="section-title">Step-by-Step — <em class="serif-italic">Nothing Gets Lost</em></h2>
+            <p class="section-subtitle">We follow a structured migration process that protects your data, minimizes disruption, and gets your team up and running in Odoo with confidence.</p>
+        </div>
+
+        <div class="process-grid scroll-reveal" data-stagger style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+            <div class="process-card" data-stagger>
+                <div class="process-step-num">01</div>
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin-bottom:10px;">Assessment &amp; Planning</h3>
+                <ul class="sc-features">
+                    <li>Analyze your existing QuickBooks data and structure</li>
+                    <li>Define clear objectives and migration scope</li>
+                    <li>Build a detailed timeline and migration roadmap</li>
+                </ul>
+            </div>
+
+            <div class="process-card" data-stagger>
+                <div class="process-step-num">02</div>
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin-bottom:10px;">Data Preparation</h3>
+                <ul class="sc-features">
+                    <li>Export customers, vendors, products, invoices, and payments</li>
+                    <li>Export chart of accounts, open balances, and transaction history</li>
+                    <li>Clean and validate data before the move</li>
+                </ul>
+            </div>
+
+            <div class="process-card" data-stagger>
+                <div class="process-step-num">03</div>
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin-bottom:10px;">Odoo Setup &amp; Configuration</h3>
+                <ul class="sc-features">
+                    <li>Install and configure your Odoo environment</li>
+                    <li>Customize accounting, reporting, and other modules to your needs</li>
+                    <li>Set up chart of accounts, tax rules, and fiscal settings</li>
+                </ul>
+            </div>
+
+            <div class="process-card" data-stagger>
+                <div class="process-step-num">04</div>
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin-bottom:10px;">Data Migration</h3>
+                <ul class="sc-features">
+                    <li>Securely migrate all data into Odoo</li>
+                    <li>Validate data integrity record by record</li>
+                    <li>Perform opening balance reconciliation</li>
+                </ul>
+            </div>
+
+            <div class="process-card" data-stagger>
+                <div class="process-step-num">05</div>
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin-bottom:10px;">Testing &amp; Training</h3>
+                <ul class="sc-features">
+                    <li>End-to-end testing of all migrated data and workflows</li>
+                    <li>Hands-on training for your accounting team</li>
+                    <li>Written SOPs so nothing depends on memory</li>
+                </ul>
+            </div>
+
+            <div class="process-card" data-stagger>
+                <div class="process-step-num">06</div>
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin-bottom:10px;">Go-Live &amp; Ongoing Support</h3>
+                <ul class="sc-features">
+                    <li>Managed transition to Odoo as your live system</li>
+                    <li>Post-migration support and issue resolution</li>
+                    <li>Optional: continued monthly bookkeeping inside Odoo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY MAKE THE SWITCH (WHAT YOU GAIN) SECTION -->
+<section class="content-section alt" id="what-you-gain" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>Why Make the Switch</div>
+            <h2 class="section-title">What You Gain by <em class="serif-italic">Moving to Odoo</em></h2>
+            <p class="section-subtitle">Upgrade from rigid legacy accounting to an integrated operational foundation.</p>
+        </div>
+
+        <div class="services-grid scroll-reveal workflow-4-grid" data-stagger style="margin-top: 40px;">
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3 class="sc-title">Enhanced Efficiency</h3>
+                <p class="sc-desc">Automate the workflows that eat your time — invoicing, reconciliation, expense approvals — so your team focuses on higher-value work.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <h3 class="sc-title">Built to Scale</h3>
+                <p class="sc-desc">Add users, locations, entities, or entire business modules without changing systems. Odoo grows with you — QuickBooks doesn't.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </div>
+                <h3 class="sc-title">Everything Connected</h3>
+                <p class="sc-desc">Accounting, sales, inventory, payroll, and CRM all in one platform. No more exporting between systems or reconciling mismatched reports.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </div>
+                <h3 class="sc-title">Smarter Decisions</h3>
+                <p class="sc-desc">Real-time dashboards and advanced analytics replace static QuickBooks exports with live visibility into your business performance.</p>
+                <div class="sc-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARISON SECTION -->
+<section class="content-section light" id="qb-vs-odoo" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>System Comparison</div>
+            <h2 class="section-title">QuickBooks vs. <em class="serif-italic">Odoo Enterprise</em></h2>
+            <p class="section-subtitle">Good for getting started — limited as you grow. Compare side-by-side capabilities.</p>
+        </div>
+
+        <div class="comparison-table-wrap scroll-reveal">
+            <table class="comp-table">
+                <thead>
+                    <tr>
+                        <th>Capability / Module</th>
+                        <th>QuickBooks (Limited as you grow)</th>
+                        <th>Odoo (Built to scale at every stage)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Accounting &amp; Ledger</strong></td>
+                        <td><span class="cross-badge">Basic</span></td>
+                        <td><span class="check-badge">✓ Advanced</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inventory Management</strong></td>
+                        <td><span class="cross-badge">Limited</span></td>
+                        <td><span class="check-badge">✓ Comprehensive</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customization</strong></td>
+                        <td><span class="cross-badge">Minimal</span></td>
+                        <td><span class="check-badge">✓ Highly Flexible</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CRM &amp; Lead Management</strong></td>
+                        <td><span class="cross-badge">Limited</span></td>
+                        <td><span class="check-badge">✓ Advanced CRM</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>E-commerce Integration</strong></td>
+                        <td><span class="cross-badge">Limited</span></td>
+                        <td><span class="check-badge">✓ Integrated</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manufacturing (MRP)</strong></td>
+                        <td><span class="cross-badge">None</span></td>
+                        <td><span class="check-badge">✓ Complete Suite</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scalability</strong></td>
+                        <td><span class="cross-badge">Limited</span></td>
+                        <td><span class="check-badge">✓ Highly Scalable</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reporting &amp; Analytics</strong></td>
+                        <td><span class="cross-badge">Basic</span></td>
+                        <td><span class="check-badge">✓ Advanced</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hosting Options</strong></td>
+                        <td><span class="cross-badge">Cloud Only</span></td>
+                        <td><span class="check-badge">✓ Cloud &amp; On-Premise</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT WORKFLOW SECTION -->
+<section class="content-section alt" id="what-happens-next" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>Get In Touch</div>
+            <h2 class="section-title">What Happens <em class="serif-italic">Next</em></h2>
+            <p class="section-subtitle">Once you reach out, here's how we move forward:</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:16px; margin-top:40px;" class="scroll-reveal workflow-5-grid" data-stagger>
+            <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:28px; transition:transform 0.3s ease;" data-stagger>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(234,228,47,0.15); color:var(--yellow); font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:16px;">1</div>
+                <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Confirmation</h3>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.5; margin:0;">We schedule a time that works for you within 48 hours.</p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:28px; transition:transform 0.3s ease;" data-stagger>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(234,228,47,0.15); color:var(--yellow); font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:16px;">2</div>
+                <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Preparation</h3>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.5; margin:0;">We review any info you share so the call is substantive, not generic.</p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:28px; transition:transform 0.3s ease;" data-stagger>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(234,228,47,0.15); color:var(--yellow); font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:16px;">3</div>
+                <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Discovery Call</h3>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.5; margin:0;">30–45 minutes to understand your books, pain points, and goals.</p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:28px; transition:transform 0.3s ease;" data-stagger>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(234,228,47,0.15); color:var(--yellow); font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:16px;">4</div>
+                <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Proposal</h3>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.5; margin:0;">A clear scope, timeline, and investment — nothing hidden.</p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:28px; transition:transform 0.3s ease;" data-stagger>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(234,228,47,0.15); color:var(--yellow); font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:16px;">5</div>
+                <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Implementation &amp; Support</h3>
+                <p style="font-size:13px; color:var(--text-secondary); line-height:1.5; margin:0;">We execute and stay with you through go-live and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FREE CONSULTATION FORM SECTION (PDF Pages 5-7) -->
+<section class="content-section light" id="free-consultation" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>Get In Touch</div>
+            <h2 class="section-title">Free <em class="serif-italic">Consultation</em></h2>
+            <p class="section-subtitle">Tell us where you are today and what you're trying to fix. We'll come prepared with real questions and a clear path forward.</p>
+        </div>
+
+        <div class="two-col-grid scroll-reveal" style="grid-template-columns: 1fr 1.6fr; gap:48px; margin-top:40px; align-items:start;">
+            
+            <!-- Contact Sidebar Info -->
+            <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:32px; display:flex; flex-direction:column; gap:24px;">
+                <h3 style="font-size:20px; font-weight:700; color:var(--text-primary); margin:0;">Direct Contact</h3>
+                
+                <div style="display:flex; align-items:flex-start; gap:12px;">
+                    <div style="width:36px; height:36px; border-radius:8px; background:rgba(234,228,47,0.1); color:var(--yellow); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                        <span style="display:block; font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Email</span>
+                        <a href="mailto:info@pivotaide.com" style="font-size:14px; color:var(--text-primary); text-decoration:none; font-weight:600;">info@pivotaide.com</a>
+                    </div>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:12px;">
+                    <div style="width:36px; height:36px; border-radius:8px; background:rgba(234,228,47,0.1); color:var(--yellow); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <div>
+                        <span style="display:block; font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Website</span>
+                        <a href="https://pivotaide.com" style="font-size:14px; color:var(--text-primary); text-decoration:none; font-weight:600;">pivotaide.com</a>
+                    </div>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:12px;">
+                    <div style="width:36px; height:36px; border-radius:8px; background:rgba(234,228,47,0.1); color:var(--yellow); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <span style="display:block; font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Service Area</span>
+                        <span style="font-size:14px; color:var(--text-secondary); font-weight:500;">Washington DC, Maryland, Virginia &amp; Nationwide</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form id="consultationForm" style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:36px; display:flex; flex-direction:column; gap:20px; box-shadow: 0 20px 45px rgba(0,0,0,0.25);" onsubmit="event.preventDefault(); alert('Inquiry submitted! We will be in touch within 24 hours.');">
+                
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">First Name *</label>
+                        <input type="text" required placeholder="Jane" style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(255,255,255,0.03); color:var(--text-primary); font-size:14px; outline:none;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">Last Name *</label>
+                        <input type="text" required placeholder="Smith" style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(255,255,255,0.03); color:var(--text-primary); font-size:14px; outline:none;">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">Email Address *</label>
+                        <input type="email" required placeholder="jane@yourbusiness.com" style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(255,255,255,0.03); color:var(--text-primary); font-size:14px; outline:none;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">Phone Number</label>
+                        <input type="tel" placeholder="(555) 000-0000" style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(255,255,255,0.03); color:var(--text-primary); font-size:14px; outline:none;">
+                    </div>
+                </div>
+
+                <div>
+                    <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">Company Name *</label>
+                    <input type="text" required placeholder="Your Business LLC" style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(255,255,255,0.03); color:var(--text-primary); font-size:14px; outline:none;">
+                </div>
+
+                <div>
+                    <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">I'm interested in...</label>
+                    <select style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(11,28,43,0.9); color:var(--text-primary); font-size:14px; outline:none;">
+                        <option value="">Select a service...</option>
+                        <option value="quickbooks-migration" selected>QuickBooks to Odoo Migration</option>
+                        <option value="odoo-accounting">Odoo Accounting Implementation</option>
+                        <option value="general-accounting">General Accounting &amp; Bookkeeping</option>
+                        <option value="fpa-advisory">FP&amp;A &amp; Financial Advisory</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label style="display:block; font-size:12px; font-weight:600; color:var(--text-secondary); margin-bottom:6px;">Tell us about your current situation</label>
+                    <textarea rows="4" placeholder="e.g. Currently on QuickBooks, books are behind, need cleaner reporting and payroll integrated..." style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border-light); background:rgba(255,255,255,0.03); color:var(--text-primary); font-size:14px; outline:none; resize:vertical;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-lg" style="width:100%; justify-content:center; margin-top:8px;">
+                    Submit — We'll Be in Touch Within 24 Hours →
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta-section">
+    <div class="final-cta-bg"><div class="final-cta-orb final-cta-orb-1"></div><div class="final-cta-orb final-cta-orb-2"></div></div>
+    <div class="container">
+        <div class="final-cta-inner scroll-reveal" data-stagger>
+            <div class="section-tag" data-stagger style="margin:0 auto 20px;"><span class="section-tag-dot"></span>Painless Cutover</div>
+            <h2 class="final-cta-headline">Ready for a Smoother<br><em class="serif-italic">Financial Cutover?</em></h2>
+            <p class="final-cta-sub" data-stagger">Speak with our QuickBooks migration specialists today. We will audit your current file and present a custom zero-downtime migration plan.</p>
+            <a href="contact.html" class="btn-primary btn-lg" data-stagger">Schedule Your Migration Audit →</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+    <div class="footer-top-border"></div>
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand animate-on-scroll fade-left">
+                <a href="javascript:void(0)" class="footer-logo">
+                        <img src="logo_transparent.png" alt="Pivot Aide Logo" style="width: 34px; height: 34px; border-radius: 8px; object-fit: contain; display: block;">
+                    <span style="font-size:18px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-left:8px;">Pivot<span style="color:var(--yellow);">Aide</span></span>
+                </a>
+                <p class="footer-brand-desc">Pivot Aide builds accounting systems for growing businesses. We deliver precision bookkeeping, corporate tax compliance, payroll processing, and lender-grade funding readiness solutions.</p>
+                <p style="font-size:12px;color:var(--yellow);font-weight:600;margin:0 0 8px;">See the Bigger Picture.</p>
+            </div>
+            <!-- Services Column -->
+            <div class="footer-col animate-on-scroll scale-in" data-delay="80">
+                <div class="footer-col-title">Services</div>
+                <ul class="footer-link-list">
+                    <li><a href="accounting.html">General Accounting</a></li>
+                    <li><a href="odoo-accounting.html">Odoo Accounting</a></li>
+                    <li><a href="quickbooks-migration.html">QuickBooks Migration</a></li>
+                    <li><a href="funding.html">Funding Readiness</a></li>
+                </ul>
+            </div>
+            <!-- Resources Column -->
+            <div class="footer-col animate-on-scroll scale-in" data-delay="160">
+                <div class="footer-col-title">Resources</div>
+                <ul class="footer-link-list">
+                    <li><a href="funding.html">SBA &amp; Funding Guide</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Company Column -->
+            <div class="footer-col animate-on-scroll scale-in" data-delay="240">
+                <div class="footer-col-title">Company</div>
+                <ul class="footer-link-list">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#privacy" class="privacy-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Column -->
+            <div class="footer-col animate-on-scroll fade-right" data-delay="320">
+                <div class="footer-col-title">Contact</div>
+                <ul class="footer-link-list" style="gap:12px;">
+                    <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0;color:var(--yellow);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Hyattsville, Maryland &amp; Virginia, USA</span>
+                    </li>
+                    <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--yellow);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:info@pivotaide.com" style="color:var(--text-secondary);text-decoration:none;">info@pivotaide.com</a>
+                    </li>
+                    <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--yellow);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>+1 (571) 470-3754</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pivot Aide. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#privacy" class="privacy-link">Privacy Policy</a>
+                <a href="#terms" class="terms-link">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

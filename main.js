@@ -270,6 +270,69 @@ document.addEventListener('click', (e) => {
   }
 });
 
+if (mobileMenu) {
+  // Mobile Dropdown Accordion Collapsible Logic
+  const dropdownContainers = mobileMenu.querySelectorAll('.mobile-dropdown-container');
+  dropdownContainers.forEach(container => {
+    const trigger = container.querySelector('.mobile-dropdown-trigger, .mobile-link');
+    if (trigger) {
+      trigger.style.cursor = 'pointer';
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = container.classList.contains('open');
+        container.classList.toggle('open', !isOpen);
+      });
+    }
+
+    // Auto-expand if active page is inside this container
+    if (container.querySelector('.mobile-sublink.active')) {
+      container.classList.add('open');
+    }
+  });
+
+  // Close mobile drawer when clicking a sublink or standalone link
+  mobileMenu.querySelectorAll('.mobile-sublink, a.mobile-link:not(.mobile-dropdown-trigger)').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DESKTOP NAVBAR DROPDOWN CLICK INTERACTION
+   ═══════════════════════════════════════════════════════════════════ */
+document.querySelectorAll('.nav-item-dropdown').forEach(dropdown => {
+  const link = dropdown.querySelector('.nav-link');
+  if (link) {
+    link.addEventListener('click', (e) => {
+      // If clicking inside the dropdown menu items, allow normal navigation
+      if (e.target.closest('.nav-dropdown-menu')) return;
+      
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('open');
+
+      // Close any other open dropdowns
+      document.querySelectorAll('.nav-item-dropdown.open').forEach(other => {
+        if (other !== dropdown) other.classList.remove('open');
+      });
+
+      // Toggle current dropdown
+      dropdown.classList.toggle('open', !isOpen);
+    });
+  }
+});
+
+// Close desktop dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-item-dropdown')) {
+    document.querySelectorAll('.nav-item-dropdown.open').forEach(dropdown => {
+      dropdown.classList.remove('open');
+    });
+  }
+});
+
 
 /* ═══════════════════════════════════════════════════════════════════
    FAQ ACCORDION INTERACTION
@@ -2890,6 +2953,12 @@ document.addEventListener('DOMContentLoaded', () => {
         initTermsModal();
 
         document.addEventListener('click', function(e) {
+            const logoLink = e.target.closest('.nav-logo, .footer-logo');
+            if (logoLink) {
+                e.preventDefault();
+                return;
+            }
+
             const link = e.target.closest('a');
             if (!link) return;
 

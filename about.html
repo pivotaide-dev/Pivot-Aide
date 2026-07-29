@@ -1,548 +1,926 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPSL105CH3"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-JPSL105CH3');
+        gtag('config', 'G-JPSL105CH3');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — Pivot Aide | Premium Bookkeeping & Odoo ERP</title>
-    <meta name="description" content="Learn about Pivot Aide — an Official Odoo Accounting Partner delivering unified bookkeeping, tax compliance, and ERP consulting from offices in Maryland &amp; Virginia.">
+    <meta name="description"
+        content="Learn about Pivot Aide — an Official Odoo Accounting Partner delivering unified bookkeeping, tax compliance, and ERP consulting from offices in Maryland &amp; Virginia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=Instrument+Serif:ital@1&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="logo_transparent.png">
+    <link rel="shortcut icon" type="image/png" href="logo_transparent.png">
+    <link rel="apple-touch-icon" href="logo_transparent.png">
 </head>
+
 <body>
-<div class="scroll-progress-bar" id="scrollProgress"></div>
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo" id="navLogo">
-            <div class="logo-mark"><img src="logo_image.jpg" alt="Pivot Aide Logo" style="width: 36px; height: 36px; border-radius: 9px; object-fit: cover; display: block;"></div>
-            <span class="logo-wordmark">Pivot<span class="logo-accent">Aide</span></span>
-        </a>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link active">About</a>
-            <a href="accounting.html" class="nav-link">Accounting</a>
-            <a href="odoo.html" class="nav-link">Odoo ERP</a>
-            <a href="funding.html" class="nav-link">Funding</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-        <div class="nav-actions">
-            <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener" class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Get a Free Consultation Call
+    <!-- NAVBAR -->
+    <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="nav-logo" id="navLogo">
+                <div class="logo-mark">
+                    <img src="logo_transparent.png" alt="Pivot Aide Logo"
+                        style="width: 44px; height: 44px; object-fit: contain; display: block;">
+                </div>
+                <span class="logo-wordmark">Pivot<span class="logo-accent">Aide</span></span>
             </a>
-        </div>
-        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-</nav>
-
-<!-- MOBILE DRAWER -->
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-links">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="about.html" class="mobile-link">About</a>
-        <a href="accounting.html" class="mobile-link">Accounting</a>
-        <a href="odoo.html" class="mobile-link">Odoo ERP</a>
-        <a href="funding.html" class="mobile-link">Funding Readiness</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
-    </div>
-    <div class="mobile-cta"><a href="contact.html" class="btn-primary btn-lg" style="width:100%;justify-content:center;">Schedule a Consultation</a></div>
-</div>
-
-<!-- HERO SECTION -->
-<section class="page-hero centered">
-    <div class="page-hero-bg">
-        <video autoplay loop muted playsinline class="page-hero-bg-video">
-            <source src="About/about_animation.mp4" type="video/mp4">
-        </video>
-        <div class="page-hero-orb page-hero-orb-1"></div>
-        <div class="page-hero-orb page-hero-orb-2"></div>
-        <div class="page-hero-grid"></div>
-        <div class="page-hero-overlay"></div>
-    </div>
-    <div class="container">
-        <div class="page-hero-wrapper">
-            <div class="page-hero-content">
-                <div class="page-hero-eyebrow animate-fade-in-up delay-100"><span class="page-hero-eyebrow-dot"></span>Core Strategy</div>
-                <h1 class="page-hero-title animate-fade-in-up delay-200">Why Pivot<br><em class="serif-italic">Aide</em></h1>
-                <p class="page-hero-sub animate-fade-in-up delay-300">We operate at the intersection of forensic bookkeeping &amp; accounting, strategic tax compliance, and audit-ready financial management as the foundation. From there, we layer in Fractional CFO advisory, multi-jurisdictional tax strategy, and Odoo ERP for total operational visibility.</p>
-                <div class="page-hero-actions animate-fade-in-up delay-400">
-                    <a href="contact.html" class="btn-primary btn-lg">Schedule a Consultation →</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- WHO WE ARE -->
-<section class="content-section light" id="who-we-are">
-    <div class="container">
-        <div class="two-col-grid">
-            <div class="col-content scroll-reveal" data-stagger>
-                <div class="section-tag" data-stagger><span class="section-tag-dot"></span>Who We Are</div>
-                <h2 class="section-title" data-stagger style="text-align:left;">A Unified <em class="serif-italic">Approach</em></h2>
-                <p class="section-subtitle" data-stagger style="text-align:left;margin-bottom:20px;font-size:15px;line-height:1.6;">Pivot Aide is not a generalist firm. We are a corporate financial advisory built for businesses that have outgrown basic bookkeeping—combining tax advisory, ledger precision, and enterprise ERP consulting into one connected system designed to scale with you.</p>
-                <p class="section-subtitle" data-stagger style="text-align:left;margin-bottom:20px;font-size:15px;line-height:1.6;">Our work begins where most accountants stop. We align tax strategy with ledger accuracy, then engineer the ERP infrastructure to make both sustainable—customized workflows, automated reconciliation, and reporting architectures built around your specific industry, not a generic template. Whether you are consolidating multi-entity operations, preparing for a funding round, or expanding into new markets, we build the financial backbone that makes execution possible.</p>
-                <p class="section-subtitle" data-stagger style="text-align:left;margin-bottom:20px;font-size:15px;line-height:1.6;">From our offices in Hyattsville, Maryland, and Virginia, we partner with ambitious leadership teams who understand that financial systems are not a back-office function—they are a competitive advantage. We don't hand you a report and walk away. We embed into your operations, align with your growth strategy, and build systems that compound in value the longer we work together.</p>
-                <p class="section-subtitle" data-stagger style="text-align:left;margin-bottom:0;font-size:15px;line-height:1.6;">Our commitment is absolute transparency, deep collaboration, and measurable business outcomes. Every engagement is built on the conviction that the right financial infrastructure—precisely configured, strategically maintained—is the foundation every high-growth business deserves.</p>
-            </div>
-            
-            <div class="col-visual scroll-reveal" data-stagger>
-                <div class="visual-card">
-                    <div class="visual-card-header" data-stagger>
-                        <div class="vc-dot vc-dot-red"></div><div class="vc-dot vc-dot-amber"></div><div class="vc-dot vc-dot-green"></div>
-                        <span class="vc-title">Unified Advisory Engine</span>
-                    </div>
-                    <div style="display:flex;flex-direction:column;gap:14px;padding-top:10px;">
-                        <div data-stagger style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border);">
-                            <span style="font-size:13px;color:var(--text-secondary);">Bookkeeping advisory desk</span>
-                            <span style="font-size:12px;font-weight:700;color:var(--yellow);">Active</span>
-                        </div>
-                        <div data-stagger style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border);">
-                            <span style="font-size:13px;color:var(--text-secondary);">Tax advisory &amp; compliance desk</span>
-                            <span style="font-size:12px;font-weight:700;color:var(--yellow);">Active</span>
-                        </div>
-                        <div data-stagger style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border);">
-                            <span style="font-size:13px;color:var(--text-secondary);">Odoo ERP implementation desk</span>
-                            <span style="font-size:12px;font-weight:700;color:var(--yellow);">Active</span>
-                        </div>
-                        <div data-stagger style="padding:14px;background:rgba(34,208,122,0.06);border:1px solid rgba(34,208,122,0.2);border-radius:10px;text-align:center;font-size:13px;font-weight:700;color:var(--green);">
-                            Connected Business Solution ✓
-                        </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link" id="navHome">Home</a>
+                <a href="about.html" class="nav-link active" id="navAbout">About</a>
+                <div class="nav-item-dropdown">
+                    <a href="accounting.html" class="nav-link" id="navAccounting">
+                        Accounting
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">General Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Bookkeeping, tax compliance &amp; advisory</span>
+                        </a>
+                        <a href="odoo-accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Odoo Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Certified partner ERP setup &amp; bank sync</span>
+                        </a>
+                        <a href="quickbooks-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">QuickBooks Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Zero-downtime data migration to Odoo</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- COMPARISON SECTION -->
-<section class="content-section" id="comparison-section" style="padding: 80px 0; background: #F7F4EF;">
-    <div class="container">
-        <div class="section-header animate-on-scroll" style="max-width: 1000px; margin: 0 auto 40px; text-align: left;">
-            <div style="font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">Comparison</div>
-            <h2 style="font-size: 38px; font-weight: 800; color: #0B1D39; line-height: 1.15; margin: 0;">Why Pivot Aide is the <em class="serif-italic" style="font-family: 'Playfair Display', Georgia, serif; font-style: italic;">smarter system.</em></h2>
-            <div style="width: 64px; height: 4px; background: #D8B74A; margin-top: 16px;"></div>
-        </div>
-
-        <div class="smarter-system-table-wrap scroll-reveal" data-stagger style="max-width: 1000px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E6ECF1; border-radius: 12px; box-shadow: 0 10px 30px rgba(11,28,43,0.04); overflow-x: auto;">
-            <table class="smarter-system-table" style="width: 100%; border-collapse: collapse; min-width: 760px; text-align: left; font-size: 14.5px;">
-                <thead>
-                    <tr style="border-bottom: 1px solid #E6ECF1;">
-                        <th style="width: 25%; padding: 20px 24px; font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.1em; text-transform: uppercase;">Feature</th>
-                        <th style="width: 37.5%; padding: 20px 24px; font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.1em; text-transform: uppercase;">The Old Way</th>
-                        <th style="width: 37.5%; padding: 20px 24px; font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(216,183,74,0.015);">The Pivot Aide Advantage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid #E6ECF1;">
-                        <td style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">Books &amp; Records</td>
-                        <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Reconciled once a year, scrambling at tax time</td>
-                        <td style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">✓ Reconciled monthly, audit-ready year-round</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #E6ECF1;">
-                        <td style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">Tax Strategy</td>
-                        <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Filed reactively after the fact</td>
-                        <td style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">✓ Planned proactively, liability minimized</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #E6ECF1;">
-                        <td style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">Systems</td>
-                        <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Three disconnected vendors, no shared data</td>
-                        <td style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">✓ One Odoo ERP, fully connected</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #E6ECF1;">
-                        <td style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">Funding Readiness</td>
-                        <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Scrambling to assemble financials for lenders</td>
-                        <td style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">✓ Lender-ready statements, always current</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #E6ECF1;">
-                        <td style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">Financial Visibility</td>
-                        <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Guessing where the money went</td>
-                        <td style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">✓ Real-time dashboards, total operational view</td>
-                    </tr>
-                    <tr style="border-bottom: none;">
-                        <td style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">Growth Support</td>
-                        <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Outgrowing your accountant, starting over</td>
-                        <td style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">✓ Fractional CFO support that scales with you</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════ CREDENTIALS & COMPLIANCE ═══════════════════════════ -->
-<section class="content-section alt" id="credentials-compliance">
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <div class="section-tag"><span class="section-tag-dot"></span>Metrics</div>
-            <h2 class="section-title">Credentials &amp; <em class="serif-italic">Compliance</em> Stats</h2>
-            <p class="section-subtitle">We back our expertise with verified metrics and a track record of operational and capital readiness success.</p>
-        </div>
-        <div class="stats-grid scroll-reveal" data-stagger style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:30px; text-align:center; max-width:1000px; margin:0 auto;">
-            <div class="stat-card" data-stagger style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
-                <div style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
-                    <span class="counter" data-target="200">0</span>+
-                </div>
-                <h4 style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">Businesses Supported</h4>
-                <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">Active enterprises trust us with bookkeeping, payroll, and Odoo ERP implementation.</p>
-            </div>
-            <div class="stat-card" data-stagger style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
-                <div style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
-                    <span class="counter" data-target="99.8">0</span>%
-                </div>
-                <h4 style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">Compliance Rate</h4>
-                <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">On-time, error-free corporate filings, state taxes, and payroll tax submissions.</p>
-            </div>
-            <div class="stat-card" data-stagger style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
-                <div style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
-                    <span class="counter" data-target="15">0</span>+
-                </div>
-                <h4 style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">Industries Served</h4>
-                <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">Deep sector expertise in construction, healthcare, SaaS, real estate, and retail.</p>
-            </div>
-            <div class="stat-card" data-stagger style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
-                <div style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
-                    $<span class="counter" data-target="45">0</span>M+
-                </div>
-                <h4 style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">Capital Prepared</h4>
-                <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">Audit-grade financial books compiled for SBA loan readiness programs.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- WHY PIVOT AIDE -->
-<section class="content-section alt" id="why-us">
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <div class="section-tag"><span class="section-tag-dot"></span>Commitments</div>
-            <h2 class="section-title">The Pivot Aide <em class="serif-italic">Difference</em></h2>
-            <p class="section-subtitle">We design connected processes that eliminate operational friction and secure absolute compliance.</p>
-        </div>
-        <div class="why2-grid scroll-reveal" data-stagger>
-            <div class="why2-block" data-stagger>
-                <div class="why2-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </div>
-                <h3 class="why2-title">Certified Expertise</h3>
-                <p class="why2-desc">As an Official Odoo Accounting Partner, we deliver implementation, customization, and migration solutions matching corporate guidelines.</p>
-                <div class="why2-proof">✓ Official Odoo Partner</div>
-            </div>
-            <div class="why2-block" data-stagger>
-                <div class="why2-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <h3 class="why2-title">End-to-End Partnership</h3>
-                <p class="why2-desc">Our team manages your transition from blueprint mapping through sandbox testing, standard procedures, and ongoing support.</p>
-                <div class="why2-proof">✓ Zero handover gaps</div>
-            </div>
-            <div class="why2-block" data-stagger>
-                <div class="why2-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                </div>
-                <h3 class="why2-title">Finance-First Approach</h3>
-                <p class="why2-desc">We configure your Odoo system around compliant ledger accounting, robust tax audits, and real-time bank reconciliation cycles.</p>
-                <div class="why2-proof">✓ Reconciled compliance</div>
-            </div>
-            <div class="why2-block" data-stagger>
-                <div class="why2-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
-                <h3 class="why2-title">Efficiency &amp; Growth</h3>
-                <p class="why2-desc">Replacing manual entries and spreadsheets with automated workflows to dismantle operational silos across your business.</p>
-                <div class="why2-proof">✓ Silo-free workflows</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════ FIVE STAGE PROCESS ═══════════════════════════ -->
-<section class="process-section" id="process">
-    <div class="section-glow sg-right"></div>
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <div class="section-tag"><span class="section-tag-dot"></span>Our Methodology</div>
-            <h2 class="section-title">The Five-Stage <em class="serif-italic">Success</em> Process</h2>
-            <p class="section-subtitle">A structured onboarding journey designed to transform your financial operations with zero disruption to your business.</p>
-        </div>
-        <div class="process-diagram-container animate-on-scroll" style="margin-bottom: 50px;">
-            <div class="process-diagram-wrap" style="position: relative; display: inline-block; width: 100%; max-width: 960px; margin: 0 auto;">
-                <img src="5 Stage Process- (1).png" alt="Pivot Aide Client Onboarding Success Pathway Infographic" class="process-diagram-img" style="width: 100%; height: auto; display: block;">
-                <div class="diagram-hotspot" data-step="1" style="left: 20%; top: 43%;" title="Stage 1: Diagnostic & Roadmap"></div>
-                <div class="diagram-hotspot" data-step="2" style="left: 31%; top: 69%;" title="Stage 2: Data Cleanup & Migration"></div>
-                <div class="diagram-hotspot active" data-step="3" style="left: 50%; top: 55%;" title="Stage 3: Custom Integration"></div>
-                <div class="diagram-hotspot" data-step="4" style="left: 69%; top: 69%;" title="Stage 4: Training"></div>
-                <div class="diagram-hotspot" data-step="5" style="left: 80%; top: 43%;" title="Stage 5: Ongoing Support"></div>
-            </div>
-        </div>
-        <div class="process-timeline">
-            <div class="process-line">
-                <div class="process-line-progress" id="processProgress" style="width: 50%;"></div>
-            </div>
-            <div class="process-steps">
- 
-                <div class="process-step animate-on-scroll" id="procStep1" data-step="1">
-                    <div class="ps-connector">
-                        <div class="ps-dot"><span>1</span></div>
-                        <div class="ps-line"></div>
-                    </div>
-                    <div class="ps-card">
-                        <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" stroke="#EAE42F" stroke-width="1.8" stroke-linecap="round"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="#EAE42F" stroke-width="1.8"/><path d="M9 12h6M9 16h4" stroke="#EAE42F" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-                        <h4 class="ps-title">Diagnostic &amp; Roadmap</h4>
-                        <p class="ps-desc">We assess your current financial state, identify compliance gaps, and build a customized transformation roadmap aligned with your business goals.</p>
+                <div class="nav-item-dropdown">
+                    <a href="odoo.html" class="nav-link" id="navOdoo">
+                        Odoo ERP
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="odoo.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What is Odoo <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Modular platform overview &amp; capabilities</span>
+                        </a>
+                        <a href="odoo-what-we-do.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What We Do <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Custom Odoo development &amp; tailored workflows</span>
+                        </a>
+                        <a href="odoo-integration-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Integration &amp; Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Connect systems &amp; zero-downtime data cutover</span>
+                        </a>
+                        <a href="odoo-training-documentation.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Training and Documentation <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Role-based training &amp; custom SOP manuals</span>
+                        </a>
                     </div>
                 </div>
- 
-                <div class="process-step animate-on-scroll" id="procStep2" data-step="2">
-                    <div class="ps-connector">
-                        <div class="ps-dot"><span>2</span></div>
-                        <div class="ps-line"></div>
-                    </div>
-                    <div class="ps-card">
-                        <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h6" stroke="#EAE42F" stroke-width="1.8" stroke-linecap="round"/><circle cx="19" cy="15" r="3" stroke="#EAE42F" stroke-width="1.8"/><path d="M19 13v2l1 1" stroke="#EAE42F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <h4 class="ps-title">Data Cleanup &amp; Migration</h4>
-                        <p class="ps-desc">Historical data reconciliation, categorization, and safe migration into your target system — every entry verified before we move forward.</p>
-                    </div>
-                </div>
- 
-                <div class="process-step animate-on-scroll" id="procStep3" data-step="3">
-                    <div class="ps-connector">
-                        <div class="ps-dot ps-dot-active"><span>3</span></div>
-                        <div class="ps-line"></div>
-                    </div>
-                    <div class="ps-card ps-card-active">
-                        <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#EAE42F" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="#EAE42F" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="#EAE42F" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="#EAE42F" stroke-width="1.8"/></svg></div>
-                        <h4 class="ps-title">Custom Integration</h4>
-                        <p class="ps-desc">Odoo ERP configured to your workflows, banking connected, accounts mapped, and automation rules established for seamless ongoing operations.</p>
-                    </div>
-                </div>
- 
-                <div class="process-step animate-on-scroll" id="procStep4" data-step="4">
-                    <div class="ps-connector">
-                        <div class="ps-dot"><span>4</span></div>
-                        <div class="ps-line"></div>
-                    </div>
-                    <div class="ps-card">
-                        <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 015 5v2a5 5 0 01-10 0V7a5 5 0 015-5z" stroke="#EAE42F" stroke-width="1.8"/><path d="M20 21a8 8 0 10-16 0" stroke="#EAE42F" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-                        <h4 class="ps-title">Training</h4>
-                        <p class="ps-desc">Role-based training for your finance team and leadership — covering dashboards, reporting, approvals, and day-to-day system management.</p>
-                    </div>
-                </div>
- 
-                <div class="process-step animate-on-scroll" id="procStep5" data-step="5">
-                    <div class="ps-connector">
-                        <div class="ps-dot"><span>5</span></div>
-                    </div>
-                    <div class="ps-card">
-                        <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#EAE42F" stroke-width="1.8"/><path d="M8 12l3 3 5-5" stroke="#EAE42F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <h4 class="ps-title">Ongoing Support</h4>
-                        <p class="ps-desc">Continuous monthly advisory, real-time reporting, proactive compliance monitoring, and a dedicated point of contact — always in your corner.</p>
-                    </div>
-                </div>
-
+                <a href="funding.html" class="nav-link" id="navFunding">Funding</a>
+                <a href="blog.html" class="nav-link" id="navBlog">Blog</a>
+                <a href="contact.html" class="nav-link" id="navContact">Contact</a>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- SBA & FUNDING READINESS -->
-<section class="content-section alt" id="funding-readiness">
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <div class="section-tag"><span class="section-tag-dot"></span>Capital Prep</div>
-            <h2 class="section-title">Funding <em class="serif-italic">Readiness</em></h2>
-            <p class="section-subtitle">Many businesses engage Pivot Aide to prepare accurate financial records before seeking funding or investment. We build clean documentation to expedite lender approval.</p>
-        </div>
-
-        <div class="offices-grid scroll-reveal" data-stagger style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:40px;">
-            <div class="cred-card" data-stagger style="display:flex;flex-direction:column;justify-content:space-between;padding:32px;">
-                <div>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-                        <span style="font-size:12px;color:var(--yellow);text-transform:uppercase;letter-spacing:var(--ls-caps);font-weight:600;">Analysis Service</span>
-                    </div>
-                    <h3 style="font-size:18px;color:var(--text-primary);font-weight:700;margin-bottom:12px;">Funding Readiness Review</h3>
-                    <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">A detailed gap analysis of your bookkeeping entries to identify reconciliation anomalies before bankers review them.</p>
-                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:30px;padding:0;">
-                        <li style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;"><span style="color:var(--yellow);">✓</span> DSCR Snapshot calculation</li>
-                        <li style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;"><span style="color:var(--yellow);">✓</span> Documentation gap analysis</li>
-                        <li style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;"><span style="color:var(--yellow);">✓</span> Pre-underwriting preparation plan</li>
-                    </ul>
-                </div>
-                <a href="funding.html" class="btn-ghost" style="text-align:center;justify-content:center;width:100%;">Learn More →</a>
-            </div>
-            
-            <div class="cred-card" data-stagger style="display:flex;flex-direction:column;justify-content:space-between;padding:32px;border-color:rgba(234,228,47,0.3);background:rgba(234,228,47,0.025);">
-                <div>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-                        <span style="font-size:12px;color:var(--yellow);text-transform:uppercase;letter-spacing:var(--ls-caps);font-weight:600;">Complete Build</span>
-                    </div>
-                    <h3 style="font-size:18px;color:var(--text-primary);font-weight:700;margin-bottom:12px;">SBA &amp; Funding Readiness Package</h3>
-                    <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">Reconstruct historical accounts, build forward projections, and compile lender packages for SBA and bank programs.</p>
-                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:30px;padding:0;">
-                        <li style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;"><span style="color:var(--yellow);">✓</span> Lender-ready financial statements</li>
-                        <li style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;"><span style="color:var(--yellow);">✓</span> Verified DSCR ratios &amp; models</li>
-                        <li style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;"><span style="color:var(--yellow);">✓</span> Complete loan packaging support</li>
-                    </ul>
-                </div>
-                <a href="contact.html" class="btn-primary" style="text-align:center;justify-content:center;width:100%;">Schedule a Consultation →</a>
-            </div>
-        </div>
-
-        <div class="animate-on-scroll" style="max-width:800px;margin:0 auto;padding:16px 24px;background:rgba(255,255,255,0.02);border:1px solid var(--border-light);border-radius:10px;text-align:center;font-size:12px;color:var(--text-secondary);line-height:1.6;">
-            <strong>Important Notice:</strong> Pivot Aide is not a lender or loan broker. Our advisory services prepare businesses with compliant, lender-ready financial records and funding documentation to streamline third-party underwriting.
-        </div>
-    </div>
-</section>
-
-
-<!-- FINAL CTA -->
-<section class="final-cta-section">
-    <div class="final-cta-bg"><div class="final-cta-orb final-cta-orb-1"></div><div class="final-cta-orb final-cta-orb-2"></div></div>
-    <div class="container">
-        <div class="final-cta-inner scroll-reveal" data-stagger>
-            <div class="section-tag" data-stagger style="margin:0 auto 20px;"><span class="section-tag-dot"></span>Partner With Us</div>
-            <h2 class="final-cta-headline">Prepare for Sustainable<br>Business <em class="serif-italic">Growth</em></h2>
-            <p class="final-cta-sub" data-stagger>Build clean records, integrate accounting databases, and prepare lender compliance folders with Pivot Aide.</p>
-            <a href="contact.html" class="btn-primary btn-lg" data-stagger>Schedule a Consultation →</a>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer" id="footer">
-    <div class="footer-top-border"></div>
-    <div class="container">
-        <div class="footer-grid">
-            <!-- Brand Column -->
-            <div class="footer-brand animate-on-scroll fade-left">
-                <a href="index.html" class="footer-logo">
-                    <img src="logo_image.jpg" alt="Pivot Aide Logo" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover; display: block;">
-                    <span style="font-size:18px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-left:8px;">Pivot<span style="color:var(--yellow);">Aide</span></span>
-                </a>
-                <p class="footer-brand-desc">Pivot Aide builds accounting systems for growing businesses. We deliver precision bookkeeping, corporate tax compliance, payroll processing, and lender-grade funding readiness solutions.</p>
-                <p style="font-size:12px;color:var(--yellow);font-weight:600;margin:0 0 8px;">See the Bigger Picture.</p>
-            </div>
-            <!-- Services Column -->
-            <div class="footer-col animate-on-scroll scale-in" data-delay="80">
-                <div class="footer-col-title">Services</div>
-                <ul class="footer-link-list">
-                    <li><a href="accounting.html">Accounting &amp; Bookkeeping</a></li>
-                    <li><a href="odoo.html">Odoo Accounting</a></li>
-                    <li><a href="funding.html">Funding Readiness</a></li>
-                </ul>
-            </div>
-            <!-- Resources Column -->
-            <div class="footer-col animate-on-scroll scale-in" data-delay="160">
-                <div class="footer-col-title">Resources</div>
-                <ul class="footer-link-list">
-                    <li><a href="funding.html">SBA &amp; Funding Guide</a></li>
-                    <li><a href="index.html#faq">FAQ</a></li>
-                </ul>
-            </div>
-            <!-- Company Column -->
-            <div class="footer-col animate-on-scroll scale-in" data-delay="240">
-                <div class="footer-col-title">Company</div>
-                <ul class="footer-link-list">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#privacy" class="privacy-link">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <!-- Contact Column -->
-            <div class="footer-col animate-on-scroll fade-right" data-delay="320">
-                <div class="footer-col-title">Contact</div>
-                <ul class="footer-link-list" style="gap:12px;">
-                    <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:8px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0;color:var(--yellow);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>Hyattsville, Maryland &amp; Virginia, USA</span>
-                    </li>
-                    <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--yellow);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <a href="mailto:info@pivotaide.com" style="color:var(--text-secondary);text-decoration:none;">info@pivotaide.com</a>
-                    </li>
-                    <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--yellow);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>+1 (571) 470-3754</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pivot Aide. All rights reserved.</p>
-            <div class="footer-bottom-links">
-                <a href="#privacy" class="privacy-link">Privacy Policy</a>
-                <a href="#terms" class="terms-link">Terms of Service</a>
-                <a href="https://www.linkedin.com/company/pivotaide/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px;">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--yellow);"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    LinkedIn
+            <div class="nav-actions">
+                <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener"
+                    class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    Get a Free Consultation Call
                 </a>
             </div>
+            <button class="mobile-menu-toggle" id="mobileToggle"
+                aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link active">About</a>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Accounting
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="accounting.html" class="mobile-sublink">General Accounting</a>
+                    <a href="odoo-accounting.html" class="mobile-sublink">Odoo Accounting</a>
+                    <a href="quickbooks-migration.html" class="mobile-sublink">QuickBooks Migration</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Odoo ERP
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="odoo.html" class="mobile-sublink">What is Odoo</a>
+                    <a href="odoo-what-we-do.html" class="mobile-sublink">What We Do</a>
+                    <a href="odoo-integration-migration.html" class="mobile-sublink">Integration &amp; Migration</a>
+                    <a href="odoo-training-documentation.html" class="mobile-sublink">Training and Documentation</a>
+                </div>
+            </div>
+            <a href="funding.html" class="mobile-link">Funding Readiness</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="mobile-cta"><a href="contact.html" class="btn-primary btn-lg"
+                style="width:100%;justify-content:center;">Schedule a Consultation</a></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="page-hero centered">
+        <div class="page-hero-bg">
+            <video autoplay loop muted playsinline class="page-hero-bg-video">
+                <source src="About/about_animation.mp4" type="video/mp4">
+            </video>
+            <div class="page-hero-orb page-hero-orb-1"></div>
+            <div class="page-hero-orb page-hero-orb-2"></div>
+            <div class="page-hero-grid"></div>
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-wrapper">
+                <div class="page-hero-content">
+                    <div class="page-hero-eyebrow animate-fade-in-up delay-100"><span
+                            class="page-hero-eyebrow-dot"></span>Core Strategy</div>
+                    <h1 class="page-hero-title animate-fade-in-up delay-200">Why Pivot<br><em
+                            class="serif-italic">Aide</em></h1>
+                    <p class="page-hero-sub animate-fade-in-up delay-300">We operate at the intersection of forensic
+                        bookkeeping &amp; accounting, strategic tax compliance, and audit-ready financial management as
+                        the foundation. From there, we layer in Fractional CFO advisory, multi-jurisdictional tax
+                        strategy, and Odoo ERP for total operational visibility.</p>
+                    <div class="page-hero-actions animate-fade-in-up delay-400">
+                        <a href="contact.html" class="btn-primary btn-lg">Schedule a Consultation →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="content-section light" id="who-we-are">
+        <div class="container">
+            <div class="two-col-grid">
+                <div class="col-content scroll-reveal" data-stagger>
+                    <div class="section-tag" data-stagger><span class="section-tag-dot"></span>Who We Are</div>
+                    <h2 class="section-title" data-stagger style="text-align:left;">A Unified <em
+                            class="serif-italic">Approach</em></h2>
+                    <p class="section-subtitle" data-stagger
+                        style="text-align:left;margin-bottom:20px;font-size:15px;line-height:1.6;">Pivot Aide is not a
+                        generalist firm. We are a corporate financial advisory built for businesses that have outgrown
+                        basic bookkeeping—combining tax advisory, ledger precision, and enterprise ERP consulting into
+                        one connected system designed to scale with you.</p>
+                    <p class="section-subtitle" data-stagger
+                        style="text-align:left;margin-bottom:20px;font-size:15px;line-height:1.6;">Our work begins where
+                        most accountants stop. We align tax strategy with ledger accuracy, then engineer the ERP
+                        infrastructure to make both sustainable—customized workflows, automated reconciliation, and
+                        reporting architectures built around your specific industry, not a generic template. Whether you
+                        are consolidating multi-entity operations, preparing for a funding round, or expanding into new
+                        markets, we build the financial backbone that makes execution possible.</p>
+                    <p class="section-subtitle" data-stagger
+                        style="text-align:left;margin-bottom:20px;font-size:15px;line-height:1.6;">From our offices in
+                        Hyattsville, Maryland, and Virginia, we partner with ambitious leadership teams who understand
+                        that financial systems are not a back-office function—they are a competitive advantage. We don't
+                        hand you a report and walk away. We embed into your operations, align with your growth strategy,
+                        and build systems that compound in value the longer we work together.</p>
+                    <p class="section-subtitle" data-stagger
+                        style="text-align:left;margin-bottom:0;font-size:15px;line-height:1.6;">Our commitment is
+                        absolute transparency, deep collaboration, and measurable business outcomes. Every engagement is
+                        built on the conviction that the right financial infrastructure—precisely configured,
+                        strategically maintained—is the foundation every high-growth business deserves.</p>
+                </div>
+
+                <div class="col-visual scroll-reveal" data-stagger>
+                    <div class="visual-card">
+                        <div class="visual-card-header" data-stagger>
+                            <div class="vc-dot vc-dot-red"></div>
+                            <div class="vc-dot vc-dot-amber"></div>
+                            <div class="vc-dot vc-dot-green"></div>
+                            <span class="vc-title">Unified Advisory Engine</span>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:14px;padding-top:10px;">
+                            <div data-stagger
+                                style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border);">
+                                <span style="font-size:13px;color:var(--text-secondary);">Bookkeeping advisory
+                                    desk</span>
+                                <span style="font-size:12px;font-weight:700;color:var(--yellow);">Active</span>
+                            </div>
+                            <div data-stagger
+                                style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border);">
+                                <span style="font-size:13px;color:var(--text-secondary);">Tax advisory &amp; compliance
+                                    desk</span>
+                                <span style="font-size:12px;font-weight:700;color:var(--yellow);">Active</span>
+                            </div>
+                            <div data-stagger
+                                style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border);">
+                                <span style="font-size:13px;color:var(--text-secondary);">Odoo ERP implementation
+                                    desk</span>
+                                <span style="font-size:12px;font-weight:700;color:var(--yellow);">Active</span>
+                            </div>
+                            <div data-stagger
+                                style="padding:14px;background:rgba(34,208,122,0.06);border:1px solid rgba(34,208,122,0.2);border-radius:10px;text-align:center;font-size:13px;font-weight:700;color:var(--green);">
+                                Connected Business Solution ✓
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION -->
+    <section class="content-section" id="comparison-section" style="padding: 80px 0; background: #F7F4EF;">
+        <div class="container">
+            <div class="section-header animate-on-scroll"
+                style="max-width: 1000px; margin: 0 auto 40px; text-align: left;">
+                <div
+                    style="font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">
+                    Comparison</div>
+                <h2 style="font-size: 38px; font-weight: 800; color: #0B1D39; line-height: 1.15; margin: 0;">Why Pivot
+                    Aide is the <em class="serif-italic"
+                        style="font-family: 'Playfair Display', Georgia, serif; font-style: italic;">smarter
+                        system.</em></h2>
+                <div style="width: 64px; height: 4px; background: #D8B74A; margin-top: 16px;"></div>
+            </div>
+
+            <div class="smarter-system-table-wrap scroll-reveal" data-stagger
+                style="max-width: 1000px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E6ECF1; border-radius: 12px; box-shadow: 0 10px 30px rgba(11,28,43,0.04); overflow-x: auto;">
+                <table class="smarter-system-table"
+                    style="width: 100%; border-collapse: collapse; min-width: 760px; text-align: left; font-size: 14.5px;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #E6ECF1;">
+                            <th
+                                style="width: 25%; padding: 20px 24px; font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.1em; text-transform: uppercase;">
+                                Feature</th>
+                            <th
+                                style="width: 37.5%; padding: 20px 24px; font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.1em; text-transform: uppercase;">
+                                The Old Way</th>
+                            <th
+                                style="width: 37.5%; padding: 20px 24px; font-size: 11px; font-weight: 700; color: #7A8B9E; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(216,183,74,0.015);">
+                                The Pivot Aide Advantage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #E6ECF1;">
+                            <td
+                                style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">
+                                Books &amp; Records</td>
+                            <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Reconciled once a year,
+                                scrambling at tax time</td>
+                            <td
+                                style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">
+                                ✓ Reconciled monthly, audit-ready year-round</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6ECF1;">
+                            <td
+                                style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">
+                                Tax Strategy</td>
+                            <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Filed reactively after the fact
+                            </td>
+                            <td
+                                style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">
+                                ✓ Planned proactively, liability minimized</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6ECF1;">
+                            <td
+                                style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">
+                                Systems</td>
+                            <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Three disconnected vendors, no
+                                shared data</td>
+                            <td
+                                style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">
+                                ✓ One Odoo ERP, fully connected</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6ECF1;">
+                            <td
+                                style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">
+                                Funding Readiness</td>
+                            <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Scrambling to assemble
+                                financials for lenders</td>
+                            <td
+                                style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">
+                                ✓ Lender-ready statements, always current</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6ECF1;">
+                            <td
+                                style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">
+                                Financial Visibility</td>
+                            <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Guessing where the money went
+                            </td>
+                            <td
+                                style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">
+                                ✓ Real-time dashboards, total operational view</td>
+                        </tr>
+                        <tr style="border-bottom: none;">
+                            <td
+                                style="padding: 24px; font-size: 20px; font-weight: 700; color: #0B1D39; font-family: 'Playfair Display', Georgia, serif;">
+                                Growth Support</td>
+                            <td style="padding: 24px; color: #4A5568; line-height: 1.6;">Outgrowing your accountant,
+                                starting over</td>
+                            <td
+                                style="padding: 24px; font-weight: 600; color: #0B1D39; background: rgba(216,183,74,0.015); line-height: 1.6;">
+                                ✓ Fractional CFO support that scales with you</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ CREDENTIALS & COMPLIANCE ═══════════════════════════ -->
+    <section class="content-section alt" id="credentials-compliance">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><span class="section-tag-dot"></span>Metrics</div>
+                <h2 class="section-title">Credentials &amp; <em class="serif-italic">Compliance</em> Stats</h2>
+                <p class="section-subtitle">We back our expertise with verified metrics and a track record of
+                    operational and capital readiness success.</p>
+            </div>
+            <div class="stats-grid scroll-reveal" data-stagger
+                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:30px; text-align:center; max-width:1000px; margin:0 auto;">
+                <div class="stat-card" data-stagger
+                    style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
+                    <div
+                        style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
+                        <span class="counter" data-target="200">0</span>+
+                    </div>
+                    <h4
+                        style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">
+                        Businesses Supported</h4>
+                    <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">Active
+                        enterprises trust us with bookkeeping, payroll, and Odoo ERP implementation.</p>
+                </div>
+                <div class="stat-card" data-stagger
+                    style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
+                    <div
+                        style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
+                        <span class="counter" data-target="99.8">0</span>%
+                    </div>
+                    <h4
+                        style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">
+                        Compliance Rate</h4>
+                    <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">On-time,
+                        error-free corporate filings, state taxes, and payroll tax submissions.</p>
+                </div>
+                <div class="stat-card" data-stagger
+                    style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
+                    <div
+                        style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
+                        <span class="counter" data-target="15">0</span>+
+                    </div>
+                    <h4
+                        style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">
+                        Industries Served</h4>
+                    <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">Deep sector
+                        expertise in construction, healthcare, SaaS, real estate, and retail.</p>
+                </div>
+                <div class="stat-card" data-stagger
+                    style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:var(--card-radius); padding:40px 30px; position:relative; overflow:hidden;">
+                    <div
+                        style="font-size:clamp(36px, 5vw, 48px); font-weight:800; color:var(--yellow); font-family:var(--font-ui); margin-bottom:10px; line-height:1;">
+                        $<span class="counter" data-target="45">0</span>M+
+                    </div>
+                    <h4
+                        style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; text-transform:uppercase; letter-spacing:var(--ls-caps);">
+                        Capital Prepared</h4>
+                    <p style="font-size:12px; color:var(--text-secondary); line-height:1.5; margin:0;">Audit-grade
+                        financial books compiled for SBA loan readiness programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY PIVOT AIDE -->
+    <section class="content-section alt" id="why-us">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><span class="section-tag-dot"></span>Commitments</div>
+                <h2 class="section-title">The Pivot Aide <em class="serif-italic">Difference</em></h2>
+                <p class="section-subtitle">We design connected processes that eliminate operational friction and secure
+                    absolute compliance.</p>
+            </div>
+            <div class="why2-grid scroll-reveal" data-stagger>
+                <div class="why2-block" data-stagger>
+                    <div class="why2-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3 class="why2-title">Certified Expertise</h3>
+                    <p class="why2-desc">As an Official Odoo Accounting Partner, we deliver implementation,
+                        customization, and migration solutions matching corporate guidelines.</p>
+                    <div class="why2-proof">✓ Official Odoo Partner</div>
+                </div>
+                <div class="why2-block" data-stagger>
+                    <div class="why2-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="why2-title">End-to-End Partnership</h3>
+                    <p class="why2-desc">Our team manages your transition from blueprint mapping through sandbox
+                        testing, standard procedures, and ongoing support.</p>
+                    <div class="why2-proof">✓ Zero handover gaps</div>
+                </div>
+                <div class="why2-block" data-stagger>
+                    <div class="why2-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3 class="why2-title">Finance-First Approach</h3>
+                    <p class="why2-desc">We configure your Odoo system around compliant ledger accounting, robust tax
+                        audits, and real-time bank reconciliation cycles.</p>
+                    <div class="why2-proof">✓ Reconciled compliance</div>
+                </div>
+                <div class="why2-block" data-stagger>
+                    <div class="why2-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <h3 class="why2-title">Efficiency &amp; Growth</h3>
+                    <p class="why2-desc">Replacing manual entries and spreadsheets with automated workflows to dismantle
+                        operational silos across your business.</p>
+                    <div class="why2-proof">✓ Silo-free workflows</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ FIVE STAGE PROCESS ═══════════════════════════ -->
+    <section class="process-section" id="process">
+        <div class="section-glow sg-right"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><span class="section-tag-dot"></span>Our Methodology</div>
+                <h2 class="section-title">The Five-Stage <em class="serif-italic">Success</em> Process</h2>
+                <p class="section-subtitle">A structured onboarding journey designed to transform your financial
+                    operations with zero disruption to your business.</p>
+            </div>
+            <div class="process-diagram-container animate-on-scroll" style="margin-bottom: 50px;">
+                <div class="process-diagram-wrap"
+                    style="position: relative; display: inline-block; width: 100%; max-width: 960px; margin: 0 auto;">
+                    <img src="5 Stage Process- (1).png" alt="Pivot Aide Client Onboarding Success Pathway Infographic"
+                        class="process-diagram-img" style="width: 100%; height: auto; display: block;">
+                    <div class="diagram-hotspot" data-step="1" style="left: 20%; top: 43%;"
+                        title="Stage 1: Diagnostic & Roadmap"></div>
+                    <div class="diagram-hotspot" data-step="2" style="left: 31%; top: 69%;"
+                        title="Stage 2: Data Cleanup & Migration"></div>
+                    <div class="diagram-hotspot active" data-step="3" style="left: 50%; top: 55%;"
+                        title="Stage 3: Custom Integration"></div>
+                    <div class="diagram-hotspot" data-step="4" style="left: 69%; top: 69%;" title="Stage 4: Training">
+                    </div>
+                    <div class="diagram-hotspot" data-step="5" style="left: 80%; top: 43%;"
+                        title="Stage 5: Ongoing Support"></div>
+                </div>
+            </div>
+            <div class="process-timeline">
+                <div class="process-line">
+                    <div class="process-line-progress" id="processProgress" style="width: 50%;"></div>
+                </div>
+                <div class="process-steps">
+
+                    <div class="process-step animate-on-scroll" id="procStep1" data-step="1">
+                        <div class="ps-connector">
+                            <div class="ps-dot"><span>1</span></div>
+                            <div class="ps-line"></div>
+                        </div>
+                        <div class="ps-card">
+                            <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"
+                                        stroke="#EAE42F" stroke-width="1.8" stroke-linecap="round" />
+                                    <rect x="9" y="3" width="6" height="4" rx="1" stroke="#EAE42F" stroke-width="1.8" />
+                                    <path d="M9 12h6M9 16h4" stroke="#EAE42F" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                </svg></div>
+                            <h4 class="ps-title">Diagnostic &amp; Roadmap</h4>
+                            <p class="ps-desc">We assess your current financial state, identify compliance gaps, and
+                                build a customized transformation roadmap aligned with your business goals.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-on-scroll" id="procStep2" data-step="2">
+                        <div class="ps-connector">
+                            <div class="ps-dot"><span>2</span></div>
+                            <div class="ps-line"></div>
+                        </div>
+                        <div class="ps-card">
+                            <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 6h16M4 12h10M4 18h6" stroke="#EAE42F" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <circle cx="19" cy="15" r="3" stroke="#EAE42F" stroke-width="1.8" />
+                                    <path d="M19 13v2l1 1" stroke="#EAE42F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg></div>
+                            <h4 class="ps-title">Data Cleanup &amp; Migration</h4>
+                            <p class="ps-desc">Historical data reconciliation, categorization, and safe migration into
+                                your target system — every entry verified before we move forward.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-on-scroll" id="procStep3" data-step="3">
+                        <div class="ps-connector">
+                            <div class="ps-dot ps-dot-active"><span>3</span></div>
+                            <div class="ps-line"></div>
+                        </div>
+                        <div class="ps-card ps-card-active">
+                            <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#EAE42F"
+                                        stroke-width="1.8" />
+                                    <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="#EAE42F"
+                                        stroke-width="1.8" />
+                                    <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="#EAE42F"
+                                        stroke-width="1.8" />
+                                    <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="#EAE42F"
+                                        stroke-width="1.8" />
+                                </svg></div>
+                            <h4 class="ps-title">Custom Integration</h4>
+                            <p class="ps-desc">Odoo ERP configured to your workflows, banking connected, accounts
+                                mapped, and automation rules established for seamless ongoing operations.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-on-scroll" id="procStep4" data-step="4">
+                        <div class="ps-connector">
+                            <div class="ps-dot"><span>4</span></div>
+                            <div class="ps-line"></div>
+                        </div>
+                        <div class="ps-card">
+                            <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2a5 5 0 015 5v2a5 5 0 01-10 0V7a5 5 0 015-5z" stroke="#EAE42F"
+                                        stroke-width="1.8" />
+                                    <path d="M20 21a8 8 0 10-16 0" stroke="#EAE42F" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                </svg></div>
+                            <h4 class="ps-title">Training</h4>
+                            <p class="ps-desc">Role-based training for your finance team and leadership — covering
+                                dashboards, reporting, approvals, and day-to-day system management.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-on-scroll" id="procStep5" data-step="5">
+                        <div class="ps-connector">
+                            <div class="ps-dot"><span>5</span></div>
+                        </div>
+                        <div class="ps-card">
+                            <div class="ps-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                                        stroke="#EAE42F" stroke-width="1.8" />
+                                    <path d="M8 12l3 3 5-5" stroke="#EAE42F" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg></div>
+                            <h4 class="ps-title">Ongoing Support</h4>
+                            <p class="ps-desc">Continuous monthly advisory, real-time reporting, proactive compliance
+                                monitoring, and a dedicated point of contact — always in your corner.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SBA & FUNDING READINESS -->
+    <section class="content-section alt" id="funding-readiness">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><span class="section-tag-dot"></span>Capital Prep</div>
+                <h2 class="section-title">Funding <em class="serif-italic">Readiness</em></h2>
+                <p class="section-subtitle">Many businesses engage Pivot Aide to prepare accurate financial records
+                    before seeking funding or investment. We build clean documentation to expedite lender approval.</p>
+            </div>
+
+            <div class="offices-grid scroll-reveal" data-stagger
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:40px;">
+                <div class="cred-card" data-stagger
+                    style="display:flex;flex-direction:column;justify-content:space-between;padding:32px;">
+                    <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                            <span
+                                style="font-size:12px;color:var(--yellow);text-transform:uppercase;letter-spacing:var(--ls-caps);font-weight:600;">Analysis
+                                Service</span>
+                        </div>
+                        <h3 style="font-size:18px;color:var(--text-primary);font-weight:700;margin-bottom:12px;">Funding
+                            Readiness Review</h3>
+                        <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">A
+                            detailed gap analysis of your bookkeeping entries to identify reconciliation anomalies
+                            before bankers review them.</p>
+                        <ul
+                            style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:30px;padding:0;">
+                            <li
+                                style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                                <span style="color:var(--yellow);">✓</span> DSCR Snapshot calculation</li>
+                            <li
+                                style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                                <span style="color:var(--yellow);">✓</span> Documentation gap analysis</li>
+                            <li
+                                style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                                <span style="color:var(--yellow);">✓</span> Pre-underwriting preparation plan</li>
+                        </ul>
+                    </div>
+                    <a href="funding.html" class="btn-ghost"
+                        style="text-align:center;justify-content:center;width:100%;">Learn More →</a>
+                </div>
+
+                <div class="cred-card" data-stagger
+                    style="display:flex;flex-direction:column;justify-content:space-between;padding:32px;border-color:rgba(234,228,47,0.3);background:rgba(234,228,47,0.025);">
+                    <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                            <span
+                                style="font-size:12px;color:var(--yellow);text-transform:uppercase;letter-spacing:var(--ls-caps);font-weight:600;">Complete
+                                Build</span>
+                        </div>
+                        <h3 style="font-size:18px;color:var(--text-primary);font-weight:700;margin-bottom:12px;">SBA
+                            &amp; Funding Readiness Package</h3>
+                        <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">
+                            Reconstruct historical accounts, build forward projections, and compile lender packages for
+                            SBA and bank programs.</p>
+                        <ul
+                            style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:30px;padding:0;">
+                            <li
+                                style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                                <span style="color:var(--yellow);">✓</span> Lender-ready financial statements</li>
+                            <li
+                                style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                                <span style="color:var(--yellow);">✓</span> Verified DSCR ratios &amp; models</li>
+                            <li
+                                style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                                <span style="color:var(--yellow);">✓</span> Complete loan packaging support</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn-primary"
+                        style="text-align:center;justify-content:center;width:100%;">Schedule a Consultation →</a>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll"
+                style="max-width:800px;margin:0 auto;padding:16px 24px;background:rgba(255,255,255,0.02);border:1px solid var(--border-light);border-radius:10px;text-align:center;font-size:12px;color:var(--text-secondary);line-height:1.6;">
+                <strong>Important Notice:</strong> Pivot Aide is not a lender or loan broker. Our advisory services
+                prepare businesses with compliant, lender-ready financial records and funding documentation to
+                streamline third-party underwriting.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+        <div class="final-cta-bg">
+            <div class="final-cta-orb final-cta-orb-1"></div>
+            <div class="final-cta-orb final-cta-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="final-cta-inner scroll-reveal" data-stagger>
+                <div class="section-tag" data-stagger style="margin:0 auto 20px;"><span
+                        class="section-tag-dot"></span>Partner With Us</div>
+                <h2 class="final-cta-headline">Prepare for Sustainable<br>Business <em class="serif-italic">Growth</em>
+                </h2>
+                <p class="final-cta-sub" data-stagger>Build clean records, integrate accounting databases, and prepare
+                    lender compliance folders with Pivot Aide.</p>
+                <a href="contact.html" class="btn-primary btn-lg" data-stagger>Schedule a Consultation →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-top-border"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand animate-on-scroll fade-left">
+                    <a href="javascript:void(0)" class="footer-logo">
+                        <img src="logo_transparent.png" alt="Pivot Aide Logo"
+                            style="width: 34px; height: 34px; border-radius: 8px; object-fit: contain; display: block;">
+                        <span
+                            style="font-size:18px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-left:8px;">Pivot<span
+                                style="color:var(--yellow);">Aide</span></span>
+                    </a>
+                    <p class="footer-brand-desc">Pivot Aide builds accounting systems for growing businesses. We deliver
+                        precision bookkeeping, corporate tax compliance, payroll processing, and lender-grade funding
+                        readiness solutions.</p>
+                    <p style="font-size:12px;color:var(--yellow);font-weight:600;margin:0 0 8px;">See the Bigger
+                        Picture.</p>
+                </div>
+                <!-- Services Column -->
+                <div class="footer-col animate-on-scroll scale-in" data-delay="80">
+                    <div class="footer-col-title">Services</div>
+                    <ul class="footer-link-list">
+                        <li><a href="accounting.html">General Accounting</a></li>
+                        <li><a href="odoo-accounting.html">Odoo Accounting</a></li>
+                        <li><a href="quickbooks-migration.html">QuickBooks Migration</a></li>
+                        <li><a href="funding.html">Funding Readiness</a></li>
+                    </ul>
+                </div>
+                <!-- Resources Column -->
+                <div class="footer-col animate-on-scroll scale-in" data-delay="160">
+                    <div class="footer-col-title">Resources</div>
+                    <ul class="footer-link-list">
+                        <li><a href="funding.html">SBA &amp; Funding Guide</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Company Column -->
+                <div class="footer-col animate-on-scroll scale-in" data-delay="240">
+                    <div class="footer-col-title">Company</div>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#privacy" class="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Column -->
+                <div class="footer-col animate-on-scroll fade-right" data-delay="320">
+                    <div class="footer-col-title">Contact</div>
+                    <ul class="footer-link-list" style="gap:12px;">
+                        <li
+                            style="font-size:13px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:8px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-top:2px;flex-shrink:0;color:var(--yellow);">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Hyattsville, Maryland &amp; Virginia, USA</span>
+                        </li>
+                        <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;color:var(--yellow);">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <a href="mailto:info@pivotaide.com"
+                                style="color:var(--text-secondary);text-decoration:none;">info@pivotaide.com</a>
+                        </li>
+                        <li style="font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:8px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;color:var(--yellow);">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>+1 (571) 470-3754</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pivot Aide. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy" class="privacy-link">Privacy Policy</a>
+                    <a href="#terms" class="terms-link">Terms of Service</a>
+                    <a href="https://www.linkedin.com/company/pivotaide/" target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 4px;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color:var(--yellow);">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHAT WIDGET -->
+    <div class="ai-chat-widget" id="aiChatWidget"><button class="ai-chat-toggle" id="aiChatToggle" aria-label="Chat">
+            <div class="ai-chat-icon" id="aiChatOpenIcon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor"
+                        stroke-width="2" stroke-linejoin="round" />
+                </svg></div>
+            <div class="ai-chat-icon ai-chat-close-icon hidden" id="aiChatCloseIcon"><svg width="18" height="18"
+                    viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                </svg></div>
+            <div class="ai-notif-dot" id="aiNotifDot"></div>
+        </button>
+        <div class="ai-chat-panel" id="aiChatPanel">
+            <div class="ai-chat-header">
+                <div class="ai-avatar">
+                    <img src="logo_transparent.png" alt="Pivot Aide Assistant"
+                        style="width: 22px; height: 22px; border-radius: 5px; object-fit: contain; display: block;">
+                </div>
+                <div class="ai-header-info"><strong>Pivot Aide Assistant</strong><span class="ai-status"><span
+                            class="ai-status-dot"></span>Online</span></div>
+            </div>
+            <div class="ai-chat-messages" id="aiMessages">
+                <div class="ai-msg ai-msg-bot">
+                    <p>Hi! I can answer questions about our services or connect you with our team. How can I help you
+                        today?</p>
+                </div>
+                <div class="ai-quick-replies" id="aiQuickReplies"><button class="ai-qr"
+                        data-q="accounting">Accounting</button><button class="ai-qr" data-q="odoo">Odoo
+                        ERP</button><button class="ai-qr" data-q="getstarted">Get Started</button></div>
+            </div>
+            <div class="ai-lead-form" id="aiLeadForm" style="display:none;">
+                <p class="ai-lead-intro">Share your details and we'll connect you with a financial specialist:</p><input
+                    type="text" class="ai-lead-input" id="aiLeadName" placeholder="Your Name" /><input type="email"
+                    class="ai-lead-input" id="aiLeadEmail" placeholder="Work Email" /><input type="text"
+                    class="ai-lead-input" id="aiLeadCompany" placeholder="Company Name" /><button class="btn-primary"
+                    style="width:100%;padding:10px;font-size:13px;" id="aiLeadSubmit">Connect with Specialist →</button>
+            </div>
+            <div class="ai-chat-input-row" id="aiInputRow"><input type="text" class="ai-input" id="aiChatInput"
+                    placeholder="Type a message..." maxlength="280"><button class="ai-send" id="aiSendBtn"><svg
+                        width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2L11 13M22 2L15 22 11 13M22 2L2 9l9 4" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></button></div>
         </div>
     </div>
-</footer>
 
-<!-- AI CHAT WIDGET -->
-<div class="ai-chat-widget" id="aiChatWidget"><button class="ai-chat-toggle" id="aiChatToggle" aria-label="Chat"><div class="ai-chat-icon" id="aiChatOpenIcon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="ai-chat-icon ai-chat-close-icon hidden" id="aiChatCloseIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="ai-notif-dot" id="aiNotifDot"></div></button><div class="ai-chat-panel" id="aiChatPanel"><div class="ai-chat-header"><div class="ai-avatar"><img src="logo_image.jpg" alt="Pivot Aide Assistant" style="width: 18px; height: 18px; border-radius: 4px; object-fit: cover; display: block;"></div><div class="ai-header-info"><strong>Pivot Aide Assistant</strong><span class="ai-status"><span class="ai-status-dot"></span>Online</span></div></div><div class="ai-chat-messages" id="aiMessages"><div class="ai-msg ai-msg-bot"><p>Hi! I can answer questions about our services or connect you with our team. How can I help you today?</p></div><div class="ai-quick-replies" id="aiQuickReplies"><button class="ai-qr" data-q="accounting">Accounting</button><button class="ai-qr" data-q="odoo">Odoo ERP</button><button class="ai-qr" data-q="getstarted">Get Started</button></div></div><div class="ai-lead-form" id="aiLeadForm" style="display:none;"><p class="ai-lead-intro">Share your details and we'll connect you with a financial specialist:</p><input type="text" class="ai-lead-input" id="aiLeadName" placeholder="Your Name" /><input type="email" class="ai-lead-input" id="aiLeadEmail" placeholder="Work Email" /><input type="text" class="ai-lead-input" id="aiLeadCompany" placeholder="Company Name" /><button class="btn-primary" style="width:100%;padding:10px;font-size:13px;" id="aiLeadSubmit">Connect with Specialist →</button></div><div class="ai-chat-input-row" id="aiInputRow"><input type="text" class="ai-input" id="aiChatInput" placeholder="Type a message..." maxlength="280"><button class="ai-send" id="aiSendBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22 11 13M22 2L2 9l9 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>
+    <div class="toast" id="toast" role="alert">
+        <div class="toast-icon">✓</div>
+        <div class="toast-text"><strong id="toastTitle">Inquiry Submitted</strong><span id="toastMsg">We will be in
+                touch within one business day.</span></div>
+    </div>
 
-<div class="toast" id="toast" role="alert"><div class="toast-icon">✓</div><div class="toast-text"><strong id="toastTitle">Inquiry Submitted</strong><span id="toastMsg">We will be in touch within one business day.</span></div></div>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter');
 
-<script src="main.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const counters = document.querySelectorAll('.counter');
-  
-  function animateCounter(el) {
-    const target = parseFloat(el.dataset.target);
-    const duration = 2000;
-    const start = performance.now();
-    
-    function update(now) {
-      const t = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
-      
-      if (el.dataset.target.includes('.')) {
-        el.textContent = (eased * target).toFixed(1);
-      } else {
-        el.textContent = Math.round(eased * target);
-      }
-      
-      if (t < 1) {
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = el.dataset.target;
-      }
-    }
-    requestAnimationFrame(update);
-  }
+            function animateCounter(el) {
+                const target = parseFloat(el.dataset.target);
+                const duration = 2000;
+                const start = performance.now();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.counter').forEach(animateCounter);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
+                function update(now) {
+                    const t = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
 
-  const statsGrid = document.querySelector('.stats-grid');
-  if (statsGrid) {
-    observer.observe(statsGrid);
-  }
-});
-</script>
+                    if (el.dataset.target.includes('.')) {
+                        el.textContent = (eased * target).toFixed(1);
+                    } else {
+                        el.textContent = Math.round(eased * target);
+                    }
+
+                    if (t < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = el.dataset.target;
+                    }
+                }
+                requestAnimationFrame(update);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.counter').forEach(animateCounter);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            const statsGrid = document.querySelector('.stats-grid');
+            if (statsGrid) {
+                observer.observe(statsGrid);
+            }
+        });
+    </script>
 </body>
+
 </html>

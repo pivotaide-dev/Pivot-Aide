@@ -18,8 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="logo_transparent.png">
+    <link rel="shortcut icon" type="image/png" href="logo_transparent.png">
+    <link rel="apple-touch-icon" href="logo_transparent.png">
     <style>
         .partner-badge {
             display: inline-flex; align-items: center; gap: 16px;
@@ -65,44 +66,112 @@
 <div class="scroll-progress-bar" id="scrollProgress"></div>
 
 <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo" id="navLogo">
-            <div class="logo-mark"><img src="logo_image.jpg" alt="Pivot Aide Logo" style="width: 36px; height: 36px; border-radius: 9px; object-fit: cover; display: block;"></div>
-            <span class="logo-wordmark">Pivot<span class="logo-accent">Aide</span></span>
-        </a>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="accounting.html" class="nav-link">Accounting</a>
-            <a href="odoo.html" class="nav-link active">Odoo ERP</a>
-            <a href="funding.html" class="nav-link">Funding</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-        <div class="nav-actions">
-            <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener" class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Get a Free Consultation Call
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="nav-logo" id="navLogo">
+                <div class="logo-mark">
+                    <img src="logo_transparent.png" alt="Pivot Aide Logo" style="width: 44px; height: 44px; object-fit: contain; display: block;">
+                </div>
+                <span class="logo-wordmark">Pivot<span class="logo-accent">Aide</span></span>
             </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link" id="navHome">Home</a>
+                <a href="about.html" class="nav-link" id="navAbout">About</a>
+                <div class="nav-item-dropdown">
+                    <a href="accounting.html" class="nav-link" id="navAccounting">
+                        Accounting
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">General Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Bookkeeping, tax compliance &amp; advisory</span>
+                        </a>
+                        <a href="odoo-accounting.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Odoo Accounting <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Certified partner ERP setup &amp; bank sync</span>
+                        </a>
+                        <a href="quickbooks-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">QuickBooks Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Zero-downtime data migration to Odoo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="odoo.html" class="nav-link active" id="navOdoo">
+                        Odoo ERP
+                        <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="odoo.html" class="nav-dropdown-item active">
+                            <span class="nav-dropdown-item-title">What is Odoo <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Modular platform overview &amp; capabilities</span>
+                        </a>
+                        <a href="odoo-what-we-do.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">What We Do <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Custom Odoo development &amp; tailored workflows</span>
+                        </a>
+                        <a href="odoo-integration-migration.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Integration &amp; Migration <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Connect systems &amp; zero-downtime data cutover</span>
+                        </a>
+                        <a href="odoo-training-documentation.html" class="nav-dropdown-item">
+                            <span class="nav-dropdown-item-title">Training and Documentation <span>→</span></span>
+                            <span class="nav-dropdown-item-desc">Role-based training &amp; custom SOP manuals</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="funding.html" class="nav-link" id="navFunding">Funding</a>
+                <a href="blog.html" class="nav-link" id="navBlog">Blog</a>
+                <a href="contact.html" class="nav-link" id="navContact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://calendly.com/pivotaide-info/30min" target="_blank" rel="noopener" class="btn-primary-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Get a Free Consultation Call
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
-        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-</nav>
+    </nav>
 
-<!-- MOBILE DRAWER -->
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-links">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="about.html" class="mobile-link">About</a>
-        <a href="accounting.html" class="mobile-link">Accounting</a>
-        <a href="odoo.html" class="mobile-link">Odoo ERP</a>
-        <a href="funding.html" class="mobile-link">Funding Readiness</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Accounting
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="accounting.html" class="mobile-sublink">General Accounting</a>
+                    <a href="odoo-accounting.html" class="mobile-sublink">Odoo Accounting</a>
+                    <a href="quickbooks-migration.html" class="mobile-sublink">QuickBooks Migration</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown-container">
+                <span class="mobile-link" style="display:flex; justify-content:space-between; align-items:center;">
+                    Odoo ERP
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+                <div class="mobile-sub-links">
+                    <a href="odoo.html" class="mobile-sublink active">What is Odoo</a>
+                    <a href="odoo-what-we-do.html" class="mobile-sublink">What We Do</a>
+                    <a href="odoo-integration-migration.html" class="mobile-sublink">Integration &amp; Migration</a>
+                    <a href="odoo-training-documentation.html" class="mobile-sublink">Training and Documentation</a>
+                </div>
+            </div>
+            <a href="funding.html" class="mobile-link">Funding Readiness</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="mobile-cta"><a href="contact.html" class="btn-primary btn-lg" style="width:100%;justify-content:center;">Schedule a Consultation</a></div>
     </div>
-    <div class="mobile-cta"><a href="contact.html" class="btn-primary btn-lg" style="width:100%;justify-content:center;">Schedule a Consultation</a></div>
-</div>
 
-<!-- HERO SECTION -->
+    <!-- HERO SECTION -->
 <section class="page-hero centered">
     <div class="page-hero-bg">
         <video autoplay loop muted playsinline class="page-hero-bg-video">
@@ -116,13 +185,147 @@
     <div class="container">
         <div class="page-hero-wrapper">
             <div class="page-hero-content">
-                <div class="page-hero-eyebrow animate-fade-in-up delay-100"><span class="page-hero-eyebrow-dot"></span>Official Odoo Partner</div>
-                <h1 class="page-hero-title animate-fade-in-up delay-200">Odoo Accounting,<br>Done by a Certified <em class="serif-italic">Partner</em></h1>
-                <p class="page-hero-sub animate-fade-in-up delay-300">Unify your accounting, invoicing, inventory, sales, purchasing, and payroll in a single connected platform. Work with real-time financial data instead of manually reconciling multiple disconnected systems.</p>
+                <div class="page-hero-eyebrow animate-fade-in-up delay-100"><span class="page-hero-eyebrow-dot"></span>About Odoo</div>
+                <h1 class="page-hero-title animate-fade-in-up delay-200">A Complete Business<br><em class="serif-italic">Operating System</em></h1>
+                <p class="page-hero-sub animate-fade-in-up delay-300">Odoo is a comprehensive open-source business management suite designed to cover every aspect of your company's operations. Originally launched in 2005, it now powers over 7 million users worldwide with hundreds of fully integrated applications.</p>
                 <div class="page-hero-actions animate-fade-in-up delay-400">
-                    <a href="contact.html" class="btn-primary btn-lg">Schedule a Consultation →</a>
-                    <a href="#why-odoo" class="btn-ghost btn-lg">See How It Works</a>
+                    <a href="#what-is-odoo" class="btn-primary btn-lg">Explore What is Odoo →</a>
+                    <a href="#core-modules" class="btn-ghost btn-lg">View Core Modules</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ WHAT IS ODOO SECTION ═══════════════════ -->
+<section class="content-section light" id="what-is-odoo" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>Platform Overview</div>
+            <h2 class="section-title">What is <em class="serif-italic">Odoo?</em></h2>
+            <p class="section-subtitle">An enterprise-grade open-source ERP framework built to unify every department into one streamlined, intelligent system.</p>
+        </div>
+
+        <div class="services-grid scroll-reveal" data-stagger style="margin-top: 40px;">
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </div>
+                <h3 class="sc-title">Modular</h3>
+                <p class="sc-desc">Install only the apps you need, keeping the system lightweight and easy to scale as your business grows.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3 class="sc-title">Web-Based</h3>
+                <p class="sc-desc">Run your entire business from a browser — no desktop installation, no IT overhead, accessible anywhere.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h3 class="sc-title">Open Source</h3>
+                <p class="sc-desc">No vendor lock-in. Full flexibility to adapt, extend, and own your platform as your needs evolve.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </div>
+                <h3 class="sc-title">Customizable</h3>
+                <p class="sc-desc">Modify workflows, reports, and user roles to match your exact business processes and industry requirements.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3 class="sc-title">Rapid to Deploy</h3>
+                <p class="sc-desc">Get up and running in weeks, not months — with expert guidance from the Pivot Aide implementation team.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <h3 class="sc-title">Scalable</h3>
+                <p class="sc-desc">Start with what you need today. Add modules and users as your business expands — Odoo scales with you.</p>
+                <div class="sc-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ CORE ODOO MODULES ═══════════════════ -->
+<section class="content-section alt" id="core-modules" style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-tag"><span class="section-tag-dot"></span>System Components</div>
+            <h2 class="section-title">Key Odoo <em class="serif-italic">Modules</em></h2>
+            <p class="section-subtitle">Odoo replaces multiple disconnected systems with a single, unified platform. Core modules most relevant to growing businesses:</p>
+        </div>
+
+        <div class="services-grid scroll-reveal" data-stagger style="margin-top: 40px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 class="sc-title">CRM</h3>
+                <p class="sc-desc">Track leads, manage customers, and close deals faster with an integrated sales pipeline.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <h3 class="sc-title">Sales &amp; Invoicing</h3>
+                <p class="sc-desc">Create quotes, process orders, and generate invoices — all from one place.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                </div>
+                <h3 class="sc-title">Inventory Management</h3>
+                <p class="sc-desc">Optimize stock levels, automate logistics, and track procurement in real time.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3 class="sc-title">Accounting</h3>
+                <p class="sc-desc">Real-time reporting, bank reconciliation, tax management, and automated invoicing.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <h3 class="sc-title">HR &amp; Payroll</h3>
+                <p class="sc-desc">Manage recruitment, onboarding, attendance, employee records, and payroll in one system.</p>
+                <div class="sc-glow"></div>
+            </div>
+
+            <div class="service-card" data-stagger>
+                <div class="sc-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                </div>
+                <h3 class="sc-title">eCommerce &amp; Website</h3>
+                <p class="sc-desc">Launch and manage your online store with a built-in website builder and payment integrations.</p>
+                <div class="sc-glow"></div>
             </div>
         </div>
     </div>
@@ -424,8 +627,8 @@
         <div class="footer-grid">
             <!-- Brand Column -->
             <div class="footer-brand animate-on-scroll fade-left">
-                <a href="index.html" class="footer-logo">
-                    <img src="logo_image.jpg" alt="Pivot Aide Logo" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover; display: block;">
+                <a href="javascript:void(0)" class="footer-logo">
+                        <img src="logo_transparent.png" alt="Pivot Aide Logo" style="width: 34px; height: 34px; border-radius: 8px; object-fit: contain; display: block;">
                     <span style="font-size:18px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-left:8px;">Pivot<span style="color:var(--yellow);">Aide</span></span>
                 </a>
                 <p class="footer-brand-desc">Pivot Aide builds accounting systems for growing businesses. We deliver precision bookkeeping, corporate tax compliance, payroll processing, and lender-grade funding readiness solutions.</p>
@@ -435,8 +638,9 @@
             <div class="footer-col animate-on-scroll scale-in" data-delay="80">
                 <div class="footer-col-title">Services</div>
                 <ul class="footer-link-list">
-                    <li><a href="accounting.html">Accounting &amp; Bookkeeping</a></li>
-                    <li><a href="odoo.html">Odoo Accounting</a></li>
+                    <li><a href="accounting.html">General Accounting</a></li>
+                    <li><a href="odoo-accounting.html">Odoo Accounting</a></li>
+                    <li><a href="quickbooks-migration.html">QuickBooks Migration</a></li>
                     <li><a href="funding.html">Funding Readiness</a></li>
                 </ul>
             </div>
@@ -491,7 +695,8 @@
 </footer>
 
 <!-- AI CHAT WIDGET -->
-<div class="ai-chat-widget" id="aiChatWidget"><button class="ai-chat-toggle" id="aiChatToggle" aria-label="Chat"><div class="ai-chat-icon" id="aiChatOpenIcon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="ai-chat-icon ai-chat-close-icon hidden" id="aiChatCloseIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="ai-notif-dot" id="aiNotifDot"></div></button><div class="ai-chat-panel" id="aiChatPanel"><div class="ai-chat-header"><div class="ai-avatar"><img src="logo_image.jpg" alt="Pivot Aide Assistant" style="width: 18px; height: 18px; border-radius: 4px; object-fit: cover; display: block;"></div><div class="ai-header-info"><strong>Pivot Aide Assistant</strong><span class="ai-status"><span class="ai-status-dot"></span>Online</span></div></div><div class="ai-chat-messages" id="aiMessages"><div class="ai-msg ai-msg-bot"><p>Hi! I can answer questions about our services or connect you with our team. How can I help you today?</p></div><div class="ai-quick-replies" id="aiQuickReplies"><button class="ai-qr" data-q="accounting">Accounting</button><button class="ai-qr" data-q="odoo">Odoo ERP</button><button class="ai-qr" data-q="getstarted">Get Started</button></div></div><div class="ai-lead-form" id="aiLeadForm" style="display:none;"><p class="ai-lead-intro">Share your details and we'll connect you with a financial specialist:</p><input type="text" class="ai-lead-input" id="aiLeadName" placeholder="Your Name" /><input type="email" class="ai-lead-input" id="aiLeadEmail" placeholder="Work Email" /><input type="text" class="ai-lead-input" id="aiLeadCompany" placeholder="Company Name" /><button class="btn-primary" style="width:100%;padding:10px;font-size:13px;" id="aiLeadSubmit">Connect with Specialist →</button></div><div class="ai-chat-input-row" id="aiInputRow"><input type="text" class="ai-input" id="aiChatInput" placeholder="Type a message..." maxlength="280"><button class="ai-send" id="aiSendBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22 11 13M22 2L2 9l9 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>
+<div class="ai-chat-widget" id="aiChatWidget"><button class="ai-chat-toggle" id="aiChatToggle" aria-label="Chat"><div class="ai-chat-icon" id="aiChatOpenIcon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="ai-chat-icon ai-chat-close-icon hidden" id="aiChatCloseIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="ai-notif-dot" id="aiNotifDot"></div></button><div class="ai-chat-panel" id="aiChatPanel"><div class="ai-chat-header"><div class="ai-avatar">
+                    <img src="logo_transparent.png" alt="Pivot Aide Assistant" style="width: 22px; height: 22px; border-radius: 5px; object-fit: contain; display: block;"></div><div class="ai-header-info"><strong>Pivot Aide Assistant</strong><span class="ai-status"><span class="ai-status-dot"></span>Online</span></div></div><div class="ai-chat-messages" id="aiMessages"><div class="ai-msg ai-msg-bot"><p>Hi! I can answer questions about our services or connect you with our team. How can I help you today?</p></div><div class="ai-quick-replies" id="aiQuickReplies"><button class="ai-qr" data-q="accounting">Accounting</button><button class="ai-qr" data-q="odoo">Odoo ERP</button><button class="ai-qr" data-q="getstarted">Get Started</button></div></div><div class="ai-lead-form" id="aiLeadForm" style="display:none;"><p class="ai-lead-intro">Share your details and we'll connect you with a financial specialist:</p><input type="text" class="ai-lead-input" id="aiLeadName" placeholder="Your Name" /><input type="email" class="ai-lead-input" id="aiLeadEmail" placeholder="Work Email" /><input type="text" class="ai-lead-input" id="aiLeadCompany" placeholder="Company Name" /><button class="btn-primary" style="width:100%;padding:10px;font-size:13px;" id="aiLeadSubmit">Connect with Specialist →</button></div><div class="ai-chat-input-row" id="aiInputRow"><input type="text" class="ai-input" id="aiChatInput" placeholder="Type a message..." maxlength="280"><button class="ai-send" id="aiSendBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22 11 13M22 2L2 9l9 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>
 
 <div class="toast" id="toast" role="alert"><div class="toast-icon">✓</div><div class="toast-text"><strong id="toastTitle">Inquiry Submitted</strong><span id="toastMsg">We will be in touch within one business day.</span></div></div>
 
