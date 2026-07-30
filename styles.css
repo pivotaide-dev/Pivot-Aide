@@ -8430,26 +8430,28 @@ select.form-input option {
 }
 
 .partner-logos-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin-top: 32px;
+  gap: 16px;
+  margin-top: 36px;
+  width: 100%;
 }
 
 .partner-logo-tile {
   background: #FFFFFF;
   border-radius: 14px;
-  padding: 12px 24px;
-  height: 58px;
+  padding: 12px 14px;
+  height: 74px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-width: 140px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .partner-logo-tile:hover {
@@ -8458,12 +8460,13 @@ select.form-input option {
 }
 
 .partner-logo-img {
-  max-height: 34px;
-  max-width: 130px;
+  max-height: 50px;
+  max-width: 100%;
   width: auto;
-  height: auto;
+  height: 50px;
   object-fit: contain;
   filter: contrast(105%);
+  display: block;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
