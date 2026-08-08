@@ -3876,7 +3876,7 @@ em.serif-italic.shimmer {
   background: transparent !important;
   padding: 0 !important;
   box-shadow: none !important;
-  cursor: default !important;
+  cursor: pointer !important;
   transform: none !important;
   transition: none !important;
 }
