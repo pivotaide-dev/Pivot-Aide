@@ -2955,7 +2955,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', function(e) {
             const logoLink = e.target.closest('.nav-logo, .footer-logo');
             if (logoLink) {
-                e.preventDefault();
+                window.location.href = 'index.html';
                 return;
             }
 

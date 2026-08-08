@@ -4,116 +4,81 @@
    pagination, detail page view, social share, and interactive comments.
    ═══════════════════════════════════════════════════════════════════ */
 
+/* ─── CATEGORY-BASED BLOG IMAGE MAP ───────────────────────────────────────
+   10 AI-generated, topic-specific images distributed across 5 categories.
+   Each post is assigned an image by category + alternating index for variety.
+   ──────────────────────────────────────────────────────────────────────── */
+const CATEGORY_IMAGES = {
+  "Accounting & Bookkeeping": [
+    "blog-images/blog-13.png",
+    "blog-images/blog-23.png",
+    "blog-images/blog-28.png",
+    "blog-images/blog-33.png",
+    "blog-images/blog-38.png"
+  ],
+  "Tax Strategy & Compliance": [
+    "blog-images/blog-19.png",
+    "blog-images/blog-24.png",
+    "blog-images/blog-29.png",
+    "blog-images/blog-34.png",
+    "blog-images/blog-39.png"
+  ],
+  "Odoo ERP Implementation": [
+    "blog-images/blog-20.png",
+    "blog-images/blog-25.png",
+    "blog-images/blog-30.png",
+    "blog-images/blog-35.png",
+    "blog-images/blog-40.png"
+  ],
+  "Funding Readiness & SBA": [
+    "blog-images/blog-21.png",
+    "blog-images/blog-26.png",
+    "blog-images/blog-31.png",
+    "blog-images/blog-36.png",
+    "blog-images/blog-41.png"
+  ],
+  "Payroll & CFO Advisory": [
+    "blog-images/blog-22.png",
+    "blog-images/blog-27.png",
+    "blog-images/blog-32.png",
+    "blog-images/blog-37.png"
+  ]
+};
+
+// Fallback array for posts without a matched category
 const DIVERSE_BLOG_IMAGES = [
-  "https://picsum.photos/seed/mastering-accrual-accounting-vs-cash-basis-for-growing-smbs/800/500",
-  "https://picsum.photos/seed/10-crucial-financial-kpis-every-founder-must-track-monthly/800/500",
-  "https://picsum.photos/seed/how-clean-general-ledgers-streamline-year-end-financial-audits/800/500",
-  "https://picsum.photos/seed/the-ultimate-guide-to-monthly-bank-credit-card-reconciliation/800/500",
-  "https://picsum.photos/seed/inventory-valuation-methods-fifo-vs-lifo-vs-weighted-average/800/500",
-  "https://picsum.photos/seed/managing-accounts-receivable-to-reduce-days-sales-outstanding-dso/800/500",
-  "https://picsum.photos/seed/fixed-asset-management-depreciation-schedule-fundamentals/800/500",
-  "https://picsum.photos/seed/preventing-revenue-leakage-with-automated-invoicing-workflows/800/500",
-  "https://picsum.photos/seed/constructing-a-13-week-rolling-cash-flow-forecast/800/500",
-  "https://picsum.photos/seed/chart-of-accounts-architecture-for-multi-entity-organizations/800/500",
-  "https://picsum.photos/seed/deferred-revenue-asc-606-revenue-recognition-best-practices/800/500",
-  "https://picsum.photos/seed/understanding-variance-analysis-budget-vs-actual-financials/800/500",
-  "https://picsum.photos/seed/outsourced-bookkeeping-vs-in-house-accountant-cost-benefit-breakdown/800/500",
-  "https://picsum.photos/seed/how-to-audit-proof-your-business-expense-documentation/800/500",
-  "https://picsum.photos/seed/capital-leases-vs-operating-leases-under-asc-842-standards/800/500",
-  "https://picsum.photos/seed/streamlining-accounts-payable-with-3-way-invoice-matching/800/500",
-  "https://picsum.photos/seed/essential-internal-controls-to-safeguard-smb-assets-against-fraud/800/500",
-  "https://picsum.photos/seed/financial-statements-101-balance-sheet-income-cash-flow-interlocks/800/500",
-  "https://picsum.photos/seed/job-costing-strategies-for-contractors-professional-services/800/500",
-  "https://picsum.photos/seed/preparing-your-books-for-m-a-due-diligence-a-12-month-checklist/800/500",
-  "https://picsum.photos/seed/r-d-tax-credit-strategies-maximizing-innovation-deductions-in-2026/800/500",
-  "https://picsum.photos/seed/section-179-bonus-depreciation-expensing-capital-purchases-efficiently/800/500",
-  "https://picsum.photos/seed/s-corp-election-vs-c-corp-vs-llc-tax-optimization-matrix/800/500",
-  "https://picsum.photos/seed/multi-state-sales-tax-compliance-economic-nexus-rules/800/500",
-  "https://picsum.photos/seed/year-end-tax-planning-checklist-15-high-impact-tax-savings-tactics/800/500",
-  "https://picsum.photos/seed/navigating-estimated-quarterly-tax-payments-to-avoid-irs-penalties/800/500",
-  "https://picsum.photos/seed/qualified-opportunity-zone-qoz-investments-for-capital-gains-shelter/800/500",
-  "https://picsum.photos/seed/cost-segregation-studies-accelerating-commercial-real-estate-depreciation/800/500",
-  "https://picsum.photos/seed/pass-through-entity-tax-ptet-strategies-to-bypass-the-salt-cap/800/500",
-  "https://picsum.photos/seed/international-tax-compliance-form-5471-fbar-transfer-pricing-rules/800/500",
-  "https://picsum.photos/seed/maximizing-business-meals-travel-entertainment-expense-deductions/800/500",
-  "https://picsum.photos/seed/navigating-irs-form-1099-nec-1099-misc-annual-reporting-rules/800/500",
-  "https://picsum.photos/seed/employee-retention-credit-erc-audit-preparedness-irs-guidance/800/500",
-  "https://picsum.photos/seed/tax-implications-of-stock-options-isos-vs-nsos-for-tech-startups/800/500",
-  "https://picsum.photos/seed/net-operating-loss-nol-carryforwards-80-taxable-income-limits/800/500",
-  "https://picsum.photos/seed/state-local-tax-salt-nexus-risks-for-remote-workforce-companies/800/500",
-  "https://picsum.photos/seed/forming-a-captive-insurance-company-for-risk-management-tax-savings/800/500",
-  "https://picsum.photos/seed/work-opportunity-tax-credit-wotc-hiring-incentives-breakdown/800/500",
-  "https://picsum.photos/seed/section-1202-qualified-small-business-stock-qsbs-tax-exclusion-guide/800/500",
-  "https://picsum.photos/seed/irs-audit-defense-how-modern-accounting-records-protect-business-owners/800/500",
-  "https://picsum.photos/seed/why-odoo-18-is-disrupting-traditional-enterprise-erp-systems/800/500",
-  "https://picsum.photos/seed/step-by-step-roadmap-for-migrating-quickbooks-to-odoo-accounting/800/500",
-  "https://picsum.photos/seed/automating-inventory-control-multi-warehouse-tracking-in-odoo/800/500",
-  "https://picsum.photos/seed/optimizing-odoo-manufacturing-mrp-for-custom-batch-production/800/500",
-  "https://picsum.photos/seed/odoo-studio-building-custom-modules-without-writing-complex-code/800/500",
-  "https://picsum.photos/seed/integrating-odoo-crm-with-sales-pipeline-e-commerce-web-stores/800/500",
-  "https://picsum.photos/seed/odoo-community-vs-odoo-enterprise-complete-feature-pricing-guide/800/500",
-  "https://picsum.photos/seed/best-practices-for-data-cleaning-sanitization-before-erp-go-live/800/500",
-  "https://picsum.photos/seed/automating-analytic-accounting-cost-center-tracking-in-odoo/800/500",
-  "https://picsum.photos/seed/odoo-hr-attendance-integration-with-automated-payroll-engines/800/500",
-  "https://picsum.photos/seed/multi-currency-multi-company-setup-in-odoo-enterprise/800/500",
-  "https://picsum.photos/seed/how-odoo-barcode-scanner-integration-boosts-fulfillment-speed-by-300/800/500",
-  "https://picsum.photos/seed/building-interactive-executive-dashboards-custom-financial-reports-in-odoo/800/500",
-  "https://picsum.photos/seed/odoo-pos-point-of-sale-offline-mode-hardware-integration-retail-sync/800/500",
-  "https://picsum.photos/seed/managing-subscription-billing-automated-recurring-payments-in-odoo/800/500",
-  "https://picsum.photos/seed/role-based-access-control-rbac-security-policies-in-odoo/800/500",
-  "https://picsum.photos/seed/top-5-common-odoo-implementation-pitfalls-how-to-avoid-them/800/500",
-  "https://picsum.photos/seed/automating-customer-support-ticketing-sla-tracking-in-odoo-helpdesk/800/500",
-  "https://picsum.photos/seed/api-integration-framework-connecting-odoo-with-third-party-platforms/800/500",
-  "https://picsum.photos/seed/post-implementation-erp-governance-user-adoption-strategies/800/500",
-  "https://picsum.photos/seed/sba-7-a-loan-approval-blueprint-requirements-documentation-timeline/800/500",
-  "https://picsum.photos/seed/sba-504-loans-for-commercial-real-estate-heavy-equipment-acquisitions/800/500",
-  "https://picsum.photos/seed/building-bank-ready-financial-projections-3-year-p-l-balance-sheet-cash-flow/800/500",
-  "https://picsum.photos/seed/debt-service-coverage-ratio-dscr-how-lenders-evaluate-your-loan-capacity/800/500",
-  "https://picsum.photos/seed/sba-microloans-vs-conventional-bank-loans-choosing-the-right-financing-path/800/500",
-  "https://picsum.photos/seed/alternative-business-financing-revenue-based-loans-lines-of-credit-factoring/800/500",
-  "https://picsum.photos/seed/the-role-of-clean-financial-audit-records-in-venture-capital-due-diligence/800/500",
-  "https://picsum.photos/seed/commercial-collateral-evaluation-real-estate-equipment-accounts-receivable/800/500",
-  "https://picsum.photos/seed/business-credit-score-booster-dun-bradstreet-experian-paydex-strategies/800/500",
-  "https://picsum.photos/seed/preparing-a-winning-sba-loan-business-plan-narrative-section/800/500",
-  "https://picsum.photos/seed/navigating-personal-guarantees-sba-form-1919-disclosure-compliance/800/500",
-  "https://picsum.photos/seed/working-capital-loans-for-seasonal-businesses-structuring-flexible-debt/800/500",
-  "https://picsum.photos/seed/equipment-financing-options-fair-market-value-vs-1-buyout-leases/800/500",
-  "https://picsum.photos/seed/refinancing-high-interest-merchant-cash-advances-mcas-with-sba-capital/800/500",
-  "https://picsum.photos/seed/equity-financing-vs-debt-financing-strategic-trade-off-analysis-for-founders/800/500",
-  "https://picsum.photos/seed/how-quality-of-earnings-qofe-reports-impact-enterprise-loan-underwriting/800/500",
-  "https://picsum.photos/seed/government-contracting-funding-mobilization-loans-contract-financing/800/500",
-  "https://picsum.photos/seed/understanding-sba-franchise-directory-approvals-eligibility-requirements/800/500",
-  "https://picsum.photos/seed/top-7-reasons-sba-loan-applications-get-declined-and-how-to-fix-them/800/500",
-  "https://picsum.photos/seed/post-funding-compliance-managing-sba-covenant-monitoring-annual-audits/800/500",
-  "https://picsum.photos/seed/fractional-cfo-vs-full-time-cfo-when-to-scale-your-executive-finance-team/800/500",
-  "https://picsum.photos/seed/automating-multi-state-payroll-tax-withholding-registration-compliance/800/500",
-  "https://picsum.photos/seed/designing-executive-compensation-packages-phantom-stock-equity-bonuses/800/500",
-  "https://picsum.photos/seed/flsa-employee-classification-w-2-vs-1099-contractor-risk-audit/800/500",
-  "https://picsum.photos/seed/building-a-unit-economics-dashboard-for-saas-service-subscriptions/800/500",
-  "https://picsum.photos/seed/strategic-cost-reduction-frameworks-without-hurting-operations-or-morale/800/500",
-  "https://picsum.photos/seed/managing-401-k-plan-fiduciary-duties-annual-form-5500-filings/800/500",
-  "https://picsum.photos/seed/scenario-planning-financial-stress-testing-for-economic-downturns/800/500",
-  "https://picsum.photos/seed/optimizing-working-capital-cycles-receivables-inventory-payables-ccc/800/500",
-  "https://picsum.photos/seed/direct-deposit-vs-earned-wage-access-ewa-modernizing-payroll-delivery/800/500",
-  "https://picsum.photos/seed/preparing-your-business-for-a-bank-line-of-credit-extension/800/500",
-  "https://picsum.photos/seed/key-differences-between-bookkeeper-controller-and-cfo-roles/800/500",
-  "https://picsum.photos/seed/managing-overtime-pay-regulations-time-tracking-integrations/800/500",
-  "https://picsum.photos/seed/strategic-capital-allocation-dividend-payouts-vs-reinvestment-in-growth/800/500",
-  "https://picsum.photos/seed/garnishment-compliance-child-support-wage-levies-student-loans/800/500",
-  "https://picsum.photos/seed/cross-border-payroll-solutions-for-international-distributed-teams/800/500",
-  "https://picsum.photos/seed/establishing-strategic-kpis-for-department-leaders-performance-bonuses/800/500",
-  "https://picsum.photos/seed/post-merger-financial-integration-unifying-payroll-accounting-systems/800/500",
-  "https://picsum.photos/seed/year-end-w-2-w-3-processing-protocols-to-avoid-social-security-fines/800/500",
-  "https://picsum.photos/seed/the-value-of-monthly-board-reporting-packages-for-backers-directors/800/500"
+  "blog-images/blog-13.png",
+  "blog-images/blog-19.png",
+  "blog-images/blog-20.png",
+  "blog-images/blog-21.png",
+  "blog-images/blog-22.png",
+  "blog-images/blog-23.png",
+  "blog-images/blog-24.png",
+  "blog-images/blog-25.png",
+  "blog-images/blog-26.png",
+  "blog-images/blog-27.png",
+  "blog-images/blog-28.png",
+  "blog-images/blog-29.png",
+  "blog-images/blog-30.png",
+  "blog-images/blog-31.png",
+  "blog-images/blog-32.png",
+  "blog-images/blog-33.png",
+  "blog-images/blog-34.png",
+  "blog-images/blog-35.png",
+  "blog-images/blog-36.png",
+  "blog-images/blog-37.png",
+  "blog-images/blog-38.png",
+  "blog-images/blog-39.png",
+  "blog-images/blog-40.png",
+  "blog-images/blog-41.png"
 ];
 
 function getPostImage(post) {
   if (!post) return 'precision_accounting.png';
   if (post.featuredImage) return post.featuredImage;
-  const idx = (post.id - 1) % DIVERSE_BLOG_IMAGES.length;
-  return DIVERSE_BLOG_IMAGES[idx];
+  if (post.id) return `blog-images/blog-${post.id}.png`;
+  return 'precision_accounting.png';
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   const blogsData = window.PIVOT_BLOGS_DATA || [];
 
