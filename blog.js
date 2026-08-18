@@ -485,7 +485,11 @@ function initBlogListPage(blogsData) {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const url = encodeURIComponent(window.location.origin + '/blog-details.html?id=' + btn.dataset.id);
+          const origin = (window.location.origin && window.location.origin.startsWith('http') && !window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1'))
+            ? window.location.origin
+            : 'https://www.pivotaide.com';
+          const postUrl = `${origin}/blogs/blog-${btn.dataset.id}.html`;
+          const url = encodeURIComponent(postUrl);
           const title = encodeURIComponent(btn.dataset.title);
           window.open(`https://api.whatsapp.com/send?text=${title}%20${url}`, '_blank');
         });
@@ -495,7 +499,11 @@ function initBlogListPage(blogsData) {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const url = encodeURIComponent(window.location.origin + '/blog-details.html?id=' + btn.dataset.id);
+          const origin = (window.location.origin && window.location.origin.startsWith('http') && !window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1'))
+            ? window.location.origin
+            : 'https://www.pivotaide.com';
+          const postUrl = `${origin}/blogs/blog-${btn.dataset.id}.html`;
+          const url = encodeURIComponent(postUrl);
           window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
         });
       });
@@ -667,21 +675,72 @@ function initBlogDetailPage(blogsData) {
 }
 
 
+/* ── DYNAMIC OPEN GRAPH META TAGS UPDATER ── */
+function updateMetaTagsForPost(post) {
+  if (!post) return;
+  const canonicalUrl = `https://www.pivotaide.com/blogs/blog-${post.id}.html`;
+  const imageUrl = `https://www.pivotaide.com/${getPostImage(post)}`;
+  const title = `${post.title} — Pivot Aide`;
+  const description = post.excerpt || 'Expert insights and advisory from Pivot Aide CPAs and Odoo ERP Consultants.';
+
+  document.title = title;
+
+  const setMeta = (attr, key, val) => {
+    let el = document.querySelector(`meta[${attr}="${key}"]`);
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute('content', val);
+  };
+
+  setMeta('property', 'og:title', post.title);
+  setMeta('property', 'og:description', description);
+  setMeta('property', 'og:image', imageUrl);
+  setMeta('property', 'og:image:secure_url', imageUrl);
+  setMeta('property', 'og:image:width', '1200');
+  setMeta('property', 'og:image:height', '627');
+  setMeta('property', 'og:image:alt', post.title);
+  setMeta('property', 'og:url', canonicalUrl);
+  setMeta('property', 'og:type', 'article');
+  setMeta('property', 'og:site_name', 'Pivot Aide');
+
+  setMeta('name', 'twitter:card', 'summary_large_image');
+  setMeta('name', 'twitter:title', post.title);
+  setMeta('name', 'twitter:description', description);
+  setMeta('name', 'twitter:image', imageUrl);
+  setMeta('name', 'twitter:image:alt', post.title);
+  setMeta('name', 'description', description);
+
+  let canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (!canonicalLink) {
+    canonicalLink = document.createElement('link');
+    canonicalLink.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonicalLink);
+  }
+  canonicalLink.setAttribute('href', canonicalUrl);
+}
+
 /* ── SOCIAL SHARING HANDLER ── */
 function setupSocialSharing(post) {
-  const currentUrl = encodeURIComponent(window.location.href);
+  const origin = (window.location.origin && window.location.origin.startsWith('http') && !window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1'))
+    ? window.location.origin
+    : 'https://www.pivotaide.com';
+  const canonicalUrl = `${origin}/blogs/blog-${post.id}.html`;
+  const shareUrl = encodeURIComponent(canonicalUrl);
   const title = encodeURIComponent(post.title);
   const excerpt = encodeURIComponent(post.excerpt);
 
   const shareLinks = {
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`,
-    twitter: `https://twitter.com/intent/tweet?url=${currentUrl}&text=${title}`,
-    whatsapp: `https://api.whatsapp.com/send?text=${title}%20${currentUrl}`,
-    telegram: `https://t.me/share/url?url=${currentUrl}&text=${title}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${currentUrl}&description=${title}`,
-    reddit: `https://reddit.com/submit?url=${currentUrl}&title=${title}`,
-    email: `mailto:?subject=${title}&body=${excerpt}%0A%0ARead%20more:%20${currentUrl}`
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+    twitter: `https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`,
+    whatsapp: `https://api.whatsapp.com/send?text=${title}%20${shareUrl}`,
+    telegram: `https://t.me/share/url?url=${shareUrl}&text=${title}`,
+    pinterest: `https://pinterest.com/pin/create/button/?url=${shareUrl}&description=${title}`,
+    reddit: `https://reddit.com/submit?url=${shareUrl}&title=${title}`,
+    email: `mailto:?subject=${title}&body=${excerpt}%0A%0ARead%20more:%20${canonicalUrl}`
   };
 
   document.querySelectorAll('.share-btn').forEach(btn => {
@@ -689,7 +748,7 @@ function setupSocialSharing(post) {
       const platform = btn.dataset.platform;
 
       if (platform === 'copylink' || platform === 'instagram') {
-        navigator.clipboard.writeText(window.location.href).then(() => {
+        navigator.clipboard.writeText(canonicalUrl).then(() => {
           showToast('Link Copied!', 'Article link copied to clipboard.');
           if (platform === 'instagram') {
             setTimeout(() => window.open('https://instagram.com', '_blank'), 1000);
