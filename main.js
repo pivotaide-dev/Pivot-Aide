@@ -1194,9 +1194,9 @@ document.querySelectorAll('.animate-on-scroll[data-delay]').forEach(el => {
         simulateBotResponse("Pivot Aide is an Official Odoo Accounting Partner. We implement, configure, and customize the Odoo ERP platform to streamline your accounting and operations.", () => {
           simulateBotResponse("To receive a detailed scoping call for Odoo, please fill in your details below:", showLeadForm);
         });
-      } else if (q === 'funding' || q === 'pricing') {
-        const serviceName = q === 'funding' ? 'Funding Readiness' : 'Pricing & Packages';
-        simulateBotResponse(`For ${serviceName}, we evaluate your records to ensure they satisfy lending requirements and offer indicational packages from $599/mo (Foundation) to $1,299/mo (Growth).`, () => {
+      } else if (q === 'funding' || q === 'pricing' || q === 'packages') {
+        const serviceName = q === 'funding' ? 'Funding Readiness' : 'Service Packages';
+        simulateBotResponse(`For ${serviceName}, we evaluate your records to ensure they satisfy lending and compliance requirements, offering tailored service packages from Foundation to Growth and enterprise Command.`, () => {
           simulateBotResponse("Let's connect you with the right advisor. Please submit your details below:", showLeadForm);
         });
       } else if (q === 'getstarted' || q === 'implementation' || q === 'bookkeeping' || q === 'tax' || q === 'payroll') {

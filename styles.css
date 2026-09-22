@@ -3308,13 +3308,31 @@ em.serif-italic.shimmer {
   color: var(--text-muted);
 }
 
+/* Package Header Wrapper (ensures equal height divider alignment across all cards) */
+.pkg-card-header {
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.pkg-card-header .pkg-desc {
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
 .pkg-features {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 36px;
-  padding: 0;
+  padding: 24px 0 0 0;
+  border-top: 1px solid var(--border);
 }
 
 .pkg-features li {
